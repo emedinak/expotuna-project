@@ -1833,3 +1833,38 @@ nav a.active::after {
       left: 10px;
     }
   }
+
+  /* ================================
+   OUR GROUP — text upgrade
+================================ */
+
+.group-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 700;
+    color: #0f3c66;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  
+  .group-intro {
+    max-width: 580px;
+    margin: 0 auto 60px auto;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+  }
+  
+  .company-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 240px;
+  }
+  
+  .company-btn {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
