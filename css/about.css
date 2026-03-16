@@ -364,3 +364,129 @@
         flex-direction:column;
         align-items:flex-end;
         }
+
+    /* ================================
+   SECTION BACKGROUNDS + DIVIDERS
+   about.html inner pages treatment
+================================ */
+
+.about-page {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .process {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .news {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .mission {
+    background: #ffffff !important;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+
+
+
+  /* ================================
+   ABOUT PAGE — first section redesign
+================================ */
+
+.about-page {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+    padding: 60px 0 70px 0;
+  }
+  
+  .about-page .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: end;
+  }
+  
+  /* TEXT SIDE */
+  .about-page-text {
+    max-width: none;
+  }
+  
+  .about-page-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    margin-bottom: 12px;
+    color: #0f3c66;
+    line-height: 1.15;
+  }
+  
+  .about-page-text h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0f3c66;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    opacity: 0.5;
+  }
+  
+  .about-lead {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* IMAGE SIDE — single image, full height */
+  .about-page .about-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: end;
+    height: 100%;
+  }
+  
+  .about-img-main {
+    width: 105%;
+    max-width: 105%;
+    height: 500px;
+    object-fit:fill;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(15, 60, 102, 0.15);
+  }
+  
+  /* HIDE the two bottom images — only one is loading */
+  .about-img-bottom {
+    display: none;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .about-page .about-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  
+    .about-img-main {
+      height: 320px;
+    }
+  }
+  
+  
+  .process {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .news {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .mission {
+    background: #ffffff !important;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }

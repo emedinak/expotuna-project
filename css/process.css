@@ -183,3 +183,23 @@
     }
     
     }
+
+/* ================================
+   SECTION BACKGROUNDS + DIVIDERS
+   process.html inner pages treatment
+================================ */
+
+.process-intro {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .process-steps {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }
+  
+  .innovation {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }

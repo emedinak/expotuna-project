@@ -195,3 +195,13 @@
     transform:scale(1.15);
     
     }
+
+    /* ================================
+   SECTION BACKGROUNDS + DIVIDERS
+   contact.html inner pages treatment
+================================ */
+
+.contact {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+  }

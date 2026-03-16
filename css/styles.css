@@ -1216,3 +1216,53 @@ nav a.active::after {
     opacity:1;
     }
 
+
+    /* ================================
+   SECTION BACKGROUNDS + DIVIDERS
+   All sections after hero → white
+   Separated by a thin brand-blue line
+================================ */
+
+/* Shared divider style */
+.about,
+.group-section,
+.mission,
+.certifications,
+.work,
+.contact-cta {
+  background: #ffffff;
+  border-top: 1px solid rgba(15, 60, 102, 0.15);
+}
+
+/* ABOUT */
+.about {
+  padding: 120px 0;
+}
+
+/* GROUP SECTION */
+.group-section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+/* MISSION */
+.mission {
+  padding: 80px 0;
+  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%); /* override existing gradient */
+}
+
+/* CERTIFICATIONS */
+.certifications {
+  padding: 90px 0 80px 0;
+}
+
+/* WORK WITH US */
+.work {
+  padding: 70px 0;
+}
+
+/* CONTACT CTA */
+.contact-cta {
+  padding: 35px 0 !important;
+}
