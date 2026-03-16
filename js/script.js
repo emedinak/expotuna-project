@@ -139,5 +139,3 @@ navbar.classList.remove("scrolled");
 }
 
 });
-
-

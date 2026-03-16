@@ -1392,3 +1392,22 @@ nav a.active::after {
     font-size: 13px;
     color: #aaa;
   }
+
+  /* Active link underline — white when over hero, blue when scrolled */
+.navbar-home nav a::after {
+    background: white !important;
+  }
+  
+  .navbar-home nav a.active::after {
+    width: 100%;
+    background: white !important;
+  }
+  
+  .navbar-home.scrolled nav a::after {
+    background: #0f3c66 !important;
+  }
+  
+  .navbar-home.scrolled nav a.active::after {
+    width: 100%;
+    background: #0f3c66 !important;
+  }
