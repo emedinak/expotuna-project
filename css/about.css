@@ -490,3 +490,268 @@
     background: #ffffff !important;
     border-top: 1px solid rgba(15, 60, 102, 0.15);
   }
+
+
+
+
+
+  /* ================================
+   EXPORT MARKETS + STATS COMBINED
+================================ */
+
+.export-map {
+    background: #ffffff;
+    border-top: 1px solid rgba(15, 60, 102, 0.15);
+    padding: 60px 0;
+  }
+  
+  /* TWO COLUMN LAYOUT */
+  .export-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  /* LEFT */
+  .export-map-left {
+    text-align: left;
+  }
+  
+  .export-map-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #0f3c66;
+    margin-bottom: 8px;
+  }
+  
+  .export-map-intro {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .map-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* RIGHT — STATS GRID */
+  .export-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .export-stats .mission-card {
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .export-stats .mission-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .export-stats .mission-card p {
+    font-size: 13px;
+  }
+  
+  /* TOOLTIP */
+  .map-tooltip {
+    position: absolute;
+    background: #0f3c66;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+    z-index: 10;
+    letter-spacing: 0.3px;
+  }
+  
+  .map-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    background: #0f3c66;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .export-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .export-map-left {
+      text-align: center;
+    }
+  }
+
+
+
+
+
+  /* NEWS SECTION */
+
+.news {
+    padding: 70px 0;
+    background: white;
+    text-align: center;
+  }
+  
+  .news h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #0f3c66;
+  }
+  
+  .news-intro {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+  
+  /* GRID */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  /* A — EQUAL HEIGHT CARDS */
+  .news-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.08),
+      0 5px 15px rgba(0, 0, 0, 0.04);
+    transition: all .35s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.12),
+      0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* B — IMAGE SLIDER */
+  .card-slider {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .card-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.5s ease;
+  }
+  
+  .card-slider img.active {
+    opacity: 1;
+  }
+  
+  .news-card:hover .card-slider img.active {
+    transform: scale(1.04);
+  }
+  
+  /* B — HOVER OVERLAY */
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 20px;
+    background: linear-gradient(to top, rgba(15, 60, 102, 0.88) 0%, transparent 100%);
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+    z-index: 2;
+  }
+  
+  .news-card:hover .card-overlay {
+    transform: translateY(0);
+  }
+  
+  .card-overlay-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  
+  .card-overlay-location {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.4px;
+  }
+  
+  /* A — CONTENT FILLS REMAINING HEIGHT */
+  .news-content {
+    padding: 18px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top: 2px solid rgba(15, 60, 102, 0.08);
+  }
+  
+  .news-content h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #0f3c66;
+    font-weight: 600;
+  }
+  
+  .news-location {
+    font-size: 12px;
+    color: #0f3c66;
+    font-weight: 500;
+    margin-bottom: 10px;
+    opacity: 0.6;
+  }
+  
+  .news-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #777;
+    flex: 1;
+  }
+  
+  .news-tag {
+    display: none;
+  }
