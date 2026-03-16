@@ -205,3 +205,10 @@
     background: #ffffff;
     border-top: 1px solid rgba(15, 60, 102, 0.15);
   }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+  }
