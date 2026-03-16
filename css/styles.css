@@ -1266,3 +1266,11 @@ nav a.active::after {
 .contact-cta {
   padding: 35px 0 !important;
 }
+
+
+/* Matches inner pages navbar when scrolled */
+.navbar-home.scrolled {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-bottom: 0.5px solid rgba(15, 60, 102, 0.3);
+  }
