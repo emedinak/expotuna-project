@@ -1411,3 +1411,282 @@ nav a.active::after {
     width: 100%;
     background: #0f3c66 !important;
   }
+
+/* ================================
+   HERO CARDS — Option D
+   Glassmorphism + animated counters
+================================ */
+
+.hero-cards {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 5;
+  }
+  
+  .hero-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 220px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    transition: all 0.35s ease;
+  }
+  
+  .hero-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
+  }
+  
+  .hero-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-card p {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+  }
+
+
+
+
+
+  /* ================================
+   ANIMATED WAVE DIVIDER
+================================ */
+
+.wave-divider {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  .wave-divider svg {
+    display: block;
+    width: 200%;
+    height: 200px;
+    animation: waveMove 18s linear infinite;
+  }
+  
+  .wave2 {
+    animation: waveShift 6s linear infinite;
+  }
+  
+  .wave3 {
+    animation: waveShift2 10s linear infinite;
+  }
+  
+  @keyframes waveMove {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes waveShift {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-30%); }
+  }
+  
+  @keyframes waveShift2 {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-40%); }
+  }
+
+
+
+
+/* ================================
+   HERO — smooth Larvia-style upgrade
+================================ */
+
+/* STRONGER BLUE-TINTED OVERLAY */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(10, 35, 70, 0.88) 0%,
+      rgba(15, 60, 102, 0.75) 60%,
+      rgba(15, 60, 102, 0.55) 100%
+    );
+    z-index: -1;
+  }
+  
+  /* LEFT-ALIGNED CONTENT */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 680px;
+    z-index: 2;
+    padding-left: 8%;
+    padding-top: 20vh;
+  }
+  
+  /* BOLDER TITLE */
+  .hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  /* SUBTITLE */
+  .hero-subtitle {
+    font-size: 19px;
+    max-width: 520px;
+    margin: 0 0 40px 0;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+  
+  /* BUTTONS LEFT ALIGNED */
+  .hero-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  
+  /* CARDS — keep inside hero */
+  .hero-cards {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 5;
+  }
+  
+  /* WAVE — flush at bottom */
+  .wave-divider {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  .wave-divider svg {
+    display: block;
+    width: 200%;
+    height: 280px;
+    animation: waveMove 18s linear infinite;
+  }
+
+  /* ================================
+   HERO — smooth Larvia-style upgrade
+================================ */
+
+/* STRONGER BLUE-TINTED OVERLAY */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(10, 35, 70, 0.88) 0%,
+      rgba(15, 60, 102, 0.75) 60%,
+      rgba(15, 60, 102, 0.55) 100%
+    );
+    z-index: -1;
+  }
+  
+  /* LEFT-ALIGNED CONTENT */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    color: white;
+    max-width: 680px;
+    z-index: 2;
+    padding: 0 5%;
+    margin-bottom: 200px;
+  }
+  
+  /* BOLDER TITLE */
+  .hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  /* SUBTITLE */
+  .hero-subtitle {
+    font-size: 19px;
+    max-width: 520px;
+    margin: 0 0 40px 0;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+  
+  /* BUTTONS CENTERED */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  /* CARDS — keep inside hero */
+  .hero-cards {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 5;
+  }
+  
+
+  .about {
+    border-top: none !important;
+  }  
