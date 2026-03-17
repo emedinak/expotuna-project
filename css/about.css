@@ -110,14 +110,14 @@
     
     .process{
     background:white;
-    padding:80px 0;
+    padding:50px 0;
     text-align:center;
     }
     
     .process-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:80px;
+    gap:60px;
     max-width:900px;
     margin:auto;
     align-items:start;
@@ -125,19 +125,19 @@
     
     .process h2{
     font-family:'Playfair Display', serif;
-    font-size:42px;
+    font-size:39px;
     margin-bottom:20px;
     }
     
     .process p{
     max-width:420px;
-    margin:0 auto 25px auto;
+    margin:0 auto 18px auto;
     line-height:1.8;
     }
     
     .process img{
-    width:420px;
-    max-height:260px;
+    width:400px;
+    max-height:240px;
     object-fit:cover;
     border-radius:12px;
     box-shadow:0 15px 40px rgba(0,0,0,0.18);
