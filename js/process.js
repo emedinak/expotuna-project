@@ -1,21 +1,24 @@
-const steps = document.querySelectorAll(".process-step");
+/* --------------------------------
+   STAGGERED CARD ENTRANCE
+   Cards animate in sequence as the
+   grid scrolls into view
+-------------------------------- */
+
+const cards = document.querySelectorAll(".process-card");
 
 const observer = new IntersectionObserver(entries => {
 
-entries.forEach(entry => {
+    entries.forEach(entry => {
 
-if(entry.isIntersecting){
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // fire once
+        }
 
-entry.target.classList.add("show");
+    });
 
-}
-
+}, {
+    threshold: 0.15   // trigger when 15% of card is visible
 });
 
-});
-
-steps.forEach(step => {
-
-observer.observe(step);
-
-});
+cards.forEach(card => observer.observe(card));
