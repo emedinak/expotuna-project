@@ -210,9 +210,9 @@
     padding-top: 6px;
 }
 
-/* -------------------------------- */
-/* CAROUSEL */
-/* -------------------------------- */
+.brands-block .section-label {
+    color: #0f3c66;
+}
 
 .brands-carousel-wrap {
     display: flex;

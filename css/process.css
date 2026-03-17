@@ -17,26 +17,41 @@
     background: white;
     border-top: 1px solid rgba(15, 60, 102, 0.15);
     position: relative;
+    text-align: left;
 }
 
 .process-intro-inner {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
     margin-bottom: 70px;
+    text-align: left;
 }
 
-.process-intro-inner h2 {
+.process-intro-left {
+    text-align: left;
+}
+
+.process-intro-left h2 {
     font-family: 'Playfair Display', serif;
     font-size: 48px;
     color: #0f3c66;
-    margin-bottom: 20px;
+    line-height: 1.15;
+    margin-top: 10px;
 }
 
-.process-intro-inner p {
-    max-width: 680px;
-    margin: auto;
-    line-height: 1.75;
+.process-intro-right {
+    text-align: left;
+}
+
+.process-intro-right p {
     font-size: 16px;
+    line-height: 1.75;
     color: #666;
+    padding-top: 6px;
+    max-width: none;
+    margin: 0;
 }
 
 .innovation {
@@ -199,7 +214,7 @@
 /* -------------------------------- */
 
 .innovation {
-    background: white;
+    background: #f6f8fb;
     padding: 30px 0 50px 0;
     text-align: center;
 }
