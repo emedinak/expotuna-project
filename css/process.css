@@ -255,3 +255,31 @@
         font-size: 36px;
     }
 }
+
+/* INNOVATION BAR */
+
+.innovation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 60px;
+    padding-top: 35px;
+    border-top: 1px solid #e8ecf0;
+}
+
+.innovation-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0f3c66;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.innovation-text {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    flex: 1;
+}
