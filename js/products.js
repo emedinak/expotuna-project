@@ -20,18 +20,24 @@ if (track) {
   // Fill with 4 sets of clones to ensure no gap at any screen size
   for (let i = 0; i < 4; i++) {
     originalItems.forEach(item => {
-      track.appendChild(item.cloneNode(true));
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
     });
   }
 
   // Calculate the width of one full set and set animation accordingly
   const setWidth = originalItems.reduce((total, item) => {
     const style = getComputedStyle(item);
-    return total + item.offsetWidth + parseInt(style.marginRight || 0) + 50; // 50 = gap
+    return total + item.offsetWidth + parseInt(style.marginRight || 0) + 30; // 30 = gap
   }, 0);
 
   // Inject exact scroll distance as CSS variable
   track.style.setProperty("--scroll-width", `-${setWidth}px`);
+
+  // Pause on hover
+  track.addEventListener("mouseenter", () => track.style.animationPlayState = "paused");
+  track.addEventListener("mouseleave", () => track.style.animationPlayState = "running");
 
 }
 
@@ -40,71 +46,47 @@ if (track) {
    LIGHTBOX
 ================================ */
 
-// Create lightbox element and inject into page
 const lightbox = document.createElement("div");
 lightbox.classList.add("lightbox");
-lightbox.innerHTML = `<span class="lightbox-close">&times;</span><img>`;
+lightbox.innerHTML = `
+  <div class="lightbox-overlay"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close">&times;</button>
+    <img>
+  </div>
+`;
 document.body.appendChild(lightbox);
 
-const lbImg = lightbox.querySelector("img");
-const lbClose = lightbox.querySelector(".lightbox-close");
+const lbImg     = lightbox.querySelector("img");
+const lbClose   = lightbox.querySelector(".lightbox-close");
+const lbOverlay = lightbox.querySelector(".lightbox-overlay");
 
-// Open on brand item click
-document.querySelector(".brands-track").addEventListener("click", e => {
-  const item = e.target.closest(".brand-item");
-  if (!item) return;
-  const src = item.querySelector("img")?.src;
-  if (!src) return;
+function openLightbox(src) {
   lbImg.src = src;
   lightbox.classList.add("active");
-});
+  document.body.style.overflow = "hidden";
+}
 
-// Close on backdrop or X click
-lightbox.addEventListener("click", e => {
-  if (e.target === lightbox || e.target === lbClose) {
-    lightbox.classList.remove("active");
-    lbImg.src = "";
-  }
-});
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+  lbImg.src = "";
+}
 
-// Close on Escape key
+// Open on brand item click (covers originals + clones)
+if (track) {
+  track.addEventListener("click", e => {
+    const item = e.target.closest(".brand-item");
+    if (!item) return;
+    const src = item.querySelector("img")?.src;
+    if (!src) return;
+    openLightbox(src);
+  });
+}
+
+// Close on overlay, X button, or Escape
+lbOverlay.addEventListener("click", closeLightbox);
+lbClose.addEventListener("click", closeLightbox);
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") {
-    lightbox.classList.remove("active");
-    lbImg.src = "";
-  }
-});
-
-
-/* ================================
-   PRODUCT SLIDERS
-================================ */
-
-const sliders = document.querySelectorAll(".product-slider");
-
-sliders.forEach(slider => {
-
-  const images = slider.querySelectorAll(".product-image");
-  const next = slider.querySelector(".next");
-  const prev = slider.querySelector(".prev");
-
-  let index = 0;
-
-  function showImage(i) {
-    images.forEach(img => img.classList.remove("active"));
-    images[i].classList.add("active");
-  }
-
-  next.addEventListener("click", () => {
-    index++;
-    if (index >= images.length) index = 0;
-    showImage(index);
-  });
-
-  prev.addEventListener("click", () => {
-    index--;
-    if (index < 0) index = images.length - 1;
-    showImage(index);
-  });
-
+  if (e.key === "Escape") closeLightbox();
 });
