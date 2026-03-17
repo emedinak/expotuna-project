@@ -125,8 +125,8 @@
     
     .process h2{
     font-family:'Playfair Display', serif;
-    font-size:39px;
-    margin-bottom:20px;
+    font-size:36px;
+    margin-bottom:16px;
     }
     
     .process p{
@@ -925,3 +925,19 @@
         grid-template-columns: 1fr;
     }
 }
+
+.about-big-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #0f3c66;
+    line-height: 1.15;
+    margin-top: 10px;
+    border: none;
+    padding: 0;
+}
+
+.about-editorial-left {
+    border-left: none;
+    padding-left: 0;
+}
+
