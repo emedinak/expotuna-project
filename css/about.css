@@ -777,7 +777,6 @@
   
   /* LEFT — BIG TITLE */
   .about-editorial-left {
-    position: sticky;
     top: 80px;
     align-self: start;
     padding-left: 20px;
