@@ -23,7 +23,7 @@
 
 .contact-intro {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.7fr;
     gap: 80px;
     align-items: center;
     margin-bottom: 40px;
@@ -191,4 +191,11 @@
     .form-row {
         grid-template-columns: 1fr;
     }
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 60px;
+    align-items: start;
 }
