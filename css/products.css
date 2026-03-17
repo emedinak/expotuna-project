@@ -222,7 +222,7 @@
 }
 
 .brands-carousel {
-    width: 1200px;
+    width: 1050px;
     max-width: calc(100% - 40px);
     overflow: hidden;
     flex-shrink: 0;
@@ -370,22 +370,26 @@
 }
 
 /* -------------------------------- */
-/* CATALOG CTA */
+/* CATALOG ROW */
 /* -------------------------------- */
 
-.catalog-cta {
-    padding: 30px 0;
-    border-top: 1px solid rgba(15, 60, 102, 0.15);
-    background: white;
-}
-
-.catalog-cta-container {
+.catalog-row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    margin: 50px auto 0 auto;
+    max-width: 1200px;
+    border-top: 1px solid rgba(15, 60, 102, 0.1);
 }
 
-.catalog-buttons {
+.catalog-row p {
+    font-size: 15px;
+    color: #888;
+    letter-spacing: 0.2px;
+}
+
+.catalog-row .catalog-buttons {
     display: flex;
     gap: 12px;
 }
@@ -393,17 +397,29 @@
 .catalog-btn {
     background: #1f4b72;
     color: white;
-    padding: 12px 26px;
+    padding: 11px 24px;
     border-radius: 40px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0.3px;
     transition: all 0.25s ease;
 }
 
 .catalog-btn:hover {
     background: #173c5a;
     transform: translateY(-2px);
+}
+
+.catalog-btn-outline {
+    background: transparent;
+    color: #1f4b72;
+    border: 1.5px solid #1f4b72;
+}
+
+.catalog-btn-outline:hover {
+    background: #1f4b72;
+    color: white;
 }
 
 /* -------------------------------- */
