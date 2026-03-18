@@ -108,9 +108,17 @@ sliders.forEach(slider => {
     })(lineEl);
   });
 
+  const regionColors = {
+    Americas: "#2a9d8f",
+    Europe:   "#1a6fbd",
+    Africa:   "#e9c46a",
+    Asia:     "#e76f51",
+  };
+
   // Draw destination dots
   destinations.forEach(d => {
     const px = projection(d.coords);
+    const color = regionColors[d.region];
 
     const g = svg.append("g")
       .attr("class", "dest-dot")
@@ -121,7 +129,7 @@ sliders.forEach(slider => {
       .attr("cy", px[1])
       .attr("r", 5)
       .attr("fill", "none")
-      .attr("stroke", "#0f3c66")
+      .attr("stroke", color)
       .attr("stroke-width", 1)
       .attr("opacity", 0.3)
       .attr("class", "pulse-ring");
@@ -130,19 +138,28 @@ sliders.forEach(slider => {
       .attr("cx", px[0])
       .attr("cy", px[1])
       .attr("r", 3.5)
-      .attr("fill", "#0f3c66")
-      .attr("opacity", 0.85);
+      .attr("fill", color)
+      .attr("opacity", 0.9);
 
     g.on("mouseover", function(event) {
+        const svgEl = document.getElementById("world-map");
+        const svgRect = svgEl.getBoundingClientRect();
+        const wrapperRect = svgEl.closest(".map-wrapper").getBoundingClientRect();
+
+        const scaleX = svgRect.width / width;
+        const scaleY = svgRect.height / height;
+
+        // Posición del punto relativa al .map-wrapper (el contenedor del tooltip)
+        const dotX = svgRect.left - wrapperRect.left + px[0] * scaleX;
+        const dotY = svgRect.top  - wrapperRect.top  + px[1] * scaleY;
+
         tooltip.textContent = d.name;
+        tooltip.style.left = (dotX + 10) + "px";
+        tooltip.style.top  = (dotY - 12) + "px";
         tooltip.style.opacity = "1";
         tooltip.style.visibility = "visible";
+
         d3.select(this).select("circle:last-child").attr("r", 5).attr("opacity", 1);
-      })
-      .on("mousemove", function(event) {
-        const rect = document.getElementById("world-map").getBoundingClientRect();
-        tooltip.style.left = (event.clientX - rect.left + 12) + "px";
-        tooltip.style.top  = (event.clientY - rect.top  - 30) + "px";
       })
       .on("mouseout", function() {
         tooltip.style.opacity = "0";
@@ -199,6 +216,55 @@ sliders.forEach(slider => {
     .text("ECUADOR");
 
 })();
+
+
+/* ================================
+   FLEET REVEAL ON SCROLL
+================================ */
+
+/* ================================
+   COUNTER ANIMATION — stat cards
+================================ */
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+const statCards = document.querySelectorAll(".export-stat-card h3");
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const el = entry.target;
+    const raw = el.getAttribute("data-target");
+    const suffix = el.getAttribute("data-suffix") || "";
+    const prefix = el.getAttribute("data-prefix") || "";
+    const target = parseFloat(raw);
+    const isDecimal = raw.includes(".");
+    const duration = 1800;
+    const start = performance.now();
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(progress);
+      const val = eased * target;
+      el.innerHTML = `${prefix}${isDecimal ? val.toFixed(1) : Math.floor(val)}<span>${suffix}</span>`;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.6 });
+
+statCards.forEach(el => counterObserver.observe(el));
+
+
+/* ================================
+   FLEET REVEAL ON SCROLL
+================================ */
 
 const fleetReveal = document.querySelector('[data-fleet-reveal]');
 
