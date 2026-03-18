@@ -199,3 +199,18 @@ sliders.forEach(slider => {
     .text("ECUADOR");
 
 })();
+
+const fleetReveal = document.querySelector('[data-fleet-reveal]');
+
+if (fleetReveal) {
+  const fleetObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        fleetObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  fleetObserver.observe(fleetReveal);
+}

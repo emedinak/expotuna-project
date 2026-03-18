@@ -67,7 +67,6 @@
           <p>Located in Guayaquil near Ecuador's two main ports, the company benefits from reliable access to fresh seafood and efficient containerized shipping. A dedicated quality control team supervises every stage of production 24 hours a day, 365 days a year.</p>
         </div>
   
-        <!-- ICON GRID -->
 <!-- ICON GRID — custom SVGs -->
 <div class="about-icon-grid">
 
@@ -118,41 +117,71 @@
   
   </section>
 
-    <!-- FLEET SECTION -->
-
-<!-- Replace the entire .process section in about.html with this -->
+<!-- FLEET SECTION -->
 
 <section class="fleet-section">
-    <div class="container">
 
-        <div class="fleet-grid">
-
-            <!-- LEFT: Title -->
-            <div class="fleet-title-col">
-                <p class="section-label">OUR FLEET</p>
-                <h2>Fleet of Ships and Delivery</h2>
-            </div>
-
-            <!-- RIGHT: 2 columns of text + image -->
-            <div class="fleet-content">
-
-                <div class="fleet-col">
-                    <p>Expotuna S.A operates a fleet of national and international industrial vessels, as well as one of the largest artisanal fishing fleets in Ecuador. Our highly trained crews adhere to HACCP standards and maintain strict on-site quality control.</p>
-                    <p>All vessels are equipped with advanced refrigeration systems calibrated between 0°C and 4.5°C, ensuring optimal preservation from the moment of capture through to processing.</p>
-                    <p>We employ the latest fishing technologies to promote sustainable harvesting practices and protect marine ecosystems.</p>
-                </div>
-
-                <div class="fleet-col">
-                    <p>Transportation and distribution are carried out daily using our dedicated nationwide fleet of refrigerated vehicles, ensuring the integrity of the cold chain and preserving the freshness and quality of our products throughout delivery.</p>
-                    <img src="assets/images/414df70d-3786-4c9c-a1d7-6b592c2d5bb8.jpg" class="fleet-img">
-                </div>
-
-            </div>
-
-        </div>
-
+    <!-- PARALLAX IMAGE -->
+    <div class="fleet-parallax">
+      <div class="fleet-parallax-img" style="background-image: url('assets/images/prueba-barco.png')"></div>
+      <div class="fleet-parallax-overlay"></div>
     </div>
-</section>
+  
+    <!-- CONTENT — aparece con fade al hacer scroll -->
+    <div class="fleet-content" data-fleet-reveal>
+  
+      <div class="fleet-content-inner">
+  
+        <div class="fleet-text">
+          <p class="fleet-tag">
+            <span class="fleet-tag-dot"></span>
+            Our Fleet
+          </p>
+          <h2 class="fleet-title">Fleet of <em>Ships</em><br>and Delivery</h2>
+          <p class="fleet-intro">Expotuna operates national and international industrial vessels, plus one of Ecuador's largest artisanal fleets — all HACCP-certified, cold chain maintained from ocean to destination.</p>
+          <div class="fleet-pills">
+            <span class="fleet-pill">HACCP Certified</span>
+            <span class="fleet-pill">0 – 4.5°C</span>
+            <span class="fleet-pill">24/7 Cold Chain</span>
+          </div>
+        </div>
+  
+        <div class="fleet-cards">
+          <div class="fleet-card">
+            <div class="fleet-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3Z"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
+            </div>
+            <h5>Industrial Vessels</h5>
+            <p>National and international fleet with advanced refrigeration and HACCP-certified crews.</p>
+          </div>
+          <div class="fleet-card">
+            <div class="fleet-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l9-13 9 13H3z"/><path d="M12 4v4"/></svg>
+            </div>
+            <h5>Artisanal Fleet</h5>
+            <p>One of Ecuador's largest artisanal fleets, sustainably managed and monitored.</p>
+          </div>
+          <div class="fleet-card">
+            <div class="fleet-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            </div>
+            <h5>Cold Chain 0–4.5°C</h5>
+            <p>Refrigeration calibrated from capture through transit to ensure optimal preservation.</p>
+          </div>
+          <div class="fleet-card">
+            <div class="fleet-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h5>Daily Delivery</h5>
+            <p>Nationwide refrigerated vehicles maintaining cold chain integrity to every destination.</p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
 
     <!-- EXPORT MARKETS + STATS -->
     <section class="export-map">
