@@ -2101,3 +2101,152 @@ nav a.active::after {
       height: 90px;
     }
   }
+
+
+  /* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background: #0f2d4a;
+    color: white;
+  }
+  
+  .footer-inner {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+  }
+  
+  /* GRID */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding: 28px 0 20px;
+  }
+  
+  /* COL 1 */
+  .footer-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 14px;
+    display: block;
+  }
+  
+  .footer-tagline {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* SOCIAL ICONS */
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social a {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.65);
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .footer-social svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* COL TITLES */
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 18px;
+  }
+  
+  /* NAV LINKS */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  
+  .footer-nav a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .footer-nav a:hover {
+    color: white;
+    transform: translateX(4px);
+  }
+  
+  /* CONTACT */
+  .footer-contact {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+  
+  /* BOTTOM BAR */
+  .footer-bottom {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35);
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      padding: 40px 0 32px;
+    }
+  
+    .footer-col:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }

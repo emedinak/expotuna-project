@@ -491,7 +491,7 @@
      NEWS SECTION
   ================================ */
   .news {
-    padding: 70px 0;
+    padding: 30px 0;
     background: white;
     text-align: center;
     border-top: 1px solid rgba(15,60,102,0.1);
@@ -626,4 +626,12 @@
     .export-stat-card { flex: 1 1 calc(50% - 12px); min-width: 0; }
   
     .news-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .export-map {
+    padding: 20px 0 0 0;
+  }
+  
+  .export-map-header {
+    margin: 0 auto 10px auto;
   }
