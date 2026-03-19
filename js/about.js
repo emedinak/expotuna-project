@@ -80,10 +80,10 @@ sliders.forEach(slider => {
 
   const ecuadorPx = projection(ecuador);
 
-  // Draw animated lines from Ecuador
+  // Draw animated lines from Ecuador — más lentas
   destinations.forEach((d, i) => {
     const destPx = projection(d.coords);
-    const duration = 2000 + (i * 150);
+    const duration = 5000 + (i * 300); // era 2000 + (i * 150)
 
     const dx = destPx[0] - ecuadorPx[0];
     const dy = destPx[1] - ecuadorPx[1];
@@ -149,7 +149,6 @@ sliders.forEach(slider => {
         const scaleX = svgRect.width / width;
         const scaleY = svgRect.height / height;
 
-        // Posición del punto relativa al .map-wrapper (el contenedor del tooltip)
         const dotX = svgRect.left - wrapperRect.left + px[0] * scaleX;
         const dotY = svgRect.top  - wrapperRect.top  + px[1] * scaleY;
 
@@ -217,10 +216,6 @@ sliders.forEach(slider => {
 
 })();
 
-
-/* ================================
-   FLEET REVEAL ON SCROLL
-================================ */
 
 /* ================================
    COUNTER ANIMATION — stat cards
