@@ -73,8 +73,7 @@
   /* HOME NAVBAR */
   .navbar-home {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     background: transparent;
     box-shadow: none;
@@ -87,9 +86,9 @@
   }
   .navbar-home.scrolled nav a { color: #0f3c66; }
   
-  .navbar-home nav a::after        { background: white !important; }
+  .navbar-home nav a::after         { background: white !important; }
   .navbar-home nav a.active::after  { width: 100%; background: white !important; }
-  .navbar-home.scrolled nav a::after       { background: #0f3c66 !important; }
+  .navbar-home.scrolled nav a::after        { background: #0f3c66 !important; }
   .navbar-home.scrolled nav a.active::after { width: 100%; background: #0f3c66 !important; }
   
   /* LOGO SWITCH */
@@ -306,7 +305,7 @@
     display: flex;
     align-items: center;
     gap: 0;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     padding: 28px 0;
     border-top: 1px solid rgba(15, 60, 102, 0.1);
     border-bottom: 1px solid rgba(15, 60, 102, 0.1);
@@ -338,6 +337,49 @@
     background: rgba(15, 60, 102, 0.15);
     flex-shrink: 0;
   }
+  
+  /* CERT LOGOS — opción A */
+  .about-certs-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    margin-bottom: 20px;
+  }
+  .about-certs-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #aaa;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .about-certs-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .about-certs-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .about-certs-logos img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    filter: grayscale(0);
+  }
+  .about-certs-logos img:hover {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  
   .about-cta-link {
     display: inline-flex;
     align-items: center;
@@ -485,8 +527,6 @@
     position: relative;
   }
   .group-dark-card:hover { background: #1a4568; }
-  
-  /* número decorativo */
   .group-dark-num {
     font-family: "Playfair Display", serif;
     font-size: 64px;
@@ -536,7 +576,6 @@
     color: rgba(255, 255, 255, 0.2);
     text-align: center;
   }
-  
   @media (max-width: 900px) {
     .group-dark-inner { padding: 40px 0; }
     .group-dark-header { grid-template-columns: 1fr; gap: 16px; }
@@ -585,58 +624,6 @@
     margin: 10px 0 20px 0;
     border-radius: 2px;
   }
-  
-  
-  /* ================================
-     CERTIFICATIONS
-  ================================ */
-  .certifications {
-    padding: 90px 0 80px 0;
-    background: #ffffff;
-    text-align: center;
-    border-top: 1px solid rgba(15, 60, 102, 0.1);
-  }
-  .certifications h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 44px;
-    margin-bottom: 20px;
-  }
-  .certifications p {
-    max-width: 720px;
-    margin: auto;
-    margin-bottom: 70px;
-    font-size: 17px;
-    opacity: 0.85;
-    line-height: 1.7;
-  }
-  .cert-divider {
-    width: 80px; height: 2px;
-    background: #0f3c66;
-    margin: 40px auto 60px auto;
-    opacity: 0.3;
-  }
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    align-items: center;
-    justify-items: center;
-    margin-top: 20px;
-  }
-  .cert-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-  }
-  .cert-logo img {
-    max-height: 75px;
-    max-width: 160px;
-    object-fit: contain;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-  }
-  .cert-logo img:hover { opacity: 1; transform: scale(1.05); }
   
   
   /* ================================
@@ -763,8 +750,8 @@
   ================================ */
   [data-animate] {
     opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
   }
   [data-animate].visible { opacity: 1; transform: translateY(0); }
   
