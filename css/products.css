@@ -12,7 +12,7 @@
   /* -------------------------------- */
   .products-main {
     padding: 80px 0 100px 0;
-    background: #f5f7fa;          /* fondo gris exterior restaurado */
+    background: white;          /* fondo gris exterior restaurado */
     border-top: 1px solid rgba(15, 60, 102, 0.15);
     overflow: hidden;
   }
