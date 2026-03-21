@@ -503,7 +503,7 @@
     letter-spacing: -0.5px;
   }
   .group-intro { font-size: 14px; color: #999; line-height: 1.7; }
-  .group-d-cards { display: flex; flex-direction: column; gap: 8px; min-width: 360px; flex: 1; }
+  .group-d-cards { display: flex; flex-direction: column; gap: 8px; width: 440px; flex-shrink: 0; margin-left: auto; }
   .group-d-card {
     display: flex;
     align-items: center;
@@ -696,6 +696,125 @@
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 4px; }
   }
 
+
+  /* ================================
+     HAMBURGER MENU
+  ================================ */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 20;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .navbar-home.scrolled .nav-hamburger span { background: #0f3c66; }
+  .navbar-internal .nav-hamburger span { background: #0f3c66; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    .nav-hamburger { display: flex; }
+
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
+      background: #0f2d4a;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      z-index: 15;
+    }
+    #nav-menu.open { display: flex; }
+    #nav-menu a {
+      color: white !important;
+      font-size: 22px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    #nav-menu a::after { background: white !important; }
+
+    /* HERO MOBILE */
+    .hero { justify-content: flex-start; padding-top: 100px; min-height: 100svh; }
+    .hero-content { margin-top: 0; }
+    .hero h1 { font-size: 42px; letter-spacing: -0.5px; }
+    .hero-subtitle { font-size: 15px; max-width: 100%; }
+    .hero-buttons { flex-direction: column; gap: 10px; }
+    .hero .btn-primary, .hero .btn-secondary {
+      width: 100%; text-align: center; padding: 14px 20px;
+    }
+    .hero-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 24px;
+      width: 90%;
+    }
+    .hero-card { width: auto; height: 90px; }
+    .hero-card:last-child { grid-column: 1 / -1; }
+    .hero-card h3 { font-size: 24px; }
+    .hero-certs {
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px 0 24px;
+    }
+    .hero-certs-logos { gap: 16px; flex-wrap: wrap; }
+    .hero-certs-logos img { height: 28px; }
+
+    /* ABOUT MOBILE */
+    .about { padding: 60px 0; }
+    .about-container { grid-template-columns: 1fr; gap: 40px; }
+    .about-text h2 { font-size: 38px; }
+    .about-claim { font-size: 15px; }
+    .about-stats-row { padding: 20px 0; }
+    .about-stat-item { padding: 0 12px; }
+    .stat-number { font-size: 26px; }
+    .stat-label { font-size: 10px; }
+    .about-image { display: none; }
+
+    /* MISSION MOBILE */
+    .mission { padding: 60px 0; min-height: auto; }
+    .mission-cards { grid-template-columns: 1fr; gap: 16px; }
+    .mission-card { padding: 28px 24px; }
+    .mission-card h3 { font-size: 24px; }
+    .mission-card p { font-size: 13px; }
+
+    /* GROUP MOBILE */
+    .group-section { padding: 60px 0; }
+    .group-d-inner { flex-direction: column; gap: 28px; }
+    .group-d-left { max-width: 100%; }
+    .group-title { font-size: 26px; }
+    .group-d-cards { min-width: 0; width: 100%; }
+    .group-d-card { padding: 14px 16px; gap: 14px; }
+    .group-d-logo { width: 60px; height: 28px; }
+    .group-d-name { font-size: 13px; }
+    .group-d-desc { font-size: 11px; }
+
+    /* FOOTER MOBILE */
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; padding: 32px 0 24px; }
+    .footer-col:first-child { grid-column: auto; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 4px; }
+
+    /* CHATBOT MOBILE */
+    #chat-box { width: calc(100vw - 24px); right: 0; }
+    #chat-widget { right: 12px; bottom: 100px; }
+  }
 
   /* ================================
      PROCESS TIMELINE (internal pages)

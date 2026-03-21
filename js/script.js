@@ -158,3 +158,26 @@ const statObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 
 statNumbers.forEach(el => statObserver.observe(el));
+
+/* ================================
+   HAMBURGER MENU
+================================ */
+
+const hamburger = document.getElementById('nav-hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+    document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+}
