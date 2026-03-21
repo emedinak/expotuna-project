@@ -5,77 +5,75 @@
     height: 55px;
     width: auto;
     object-fit: contain;
-  }
-  
-  /* -------------------------------- */
-  /* MAIN SECTION */
-  /* -------------------------------- */
-  .products-main {
+}
+
+/* -------------------------------- */
+/* MAIN SECTION */
+/* -------------------------------- */
+.products-main {
     padding: 80px 0 100px 0;
-    background: white;          /* fondo gris exterior restaurado */
+    background: white;
     border-top: 1px solid rgba(15, 60, 102, 0.15);
     overflow: hidden;
-  }
-  
-  /* -------------------------------- */
-  /* INTRO */
-  /* -------------------------------- */
-  .products-intro-inner {
+}
+
+/* -------------------------------- */
+/* INTRO */
+/* -------------------------------- */
+.products-intro-inner {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 80px;
     align-items: start;
     margin-bottom: 70px;
-  }
-  
-  .products-intro-left h2 {
+}
+
+.products-intro-left h2 {
     font-family: 'Playfair Display', serif;
     font-size: 48px;
     color: #0f3c66;
     line-height: 1.15;
     margin-top: 10px;
-  }
-  
-  .products-intro-right p {
+}
+
+.products-intro-right p {
     font-size: 16px;
     line-height: 1.75;
     color: #666;
     padding-top: 6px;
-  }
-  
-  /* -------------------------------- */
-  /* PRODUCTS GRID */
-  /* -------------------------------- */
-  .products-grid {
+}
+
+/* -------------------------------- */
+/* PRODUCTS GRID */
+/* -------------------------------- */
+.products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
-  }
-  
-  /* -------------------------------- */
-  /* FLIP CARD */
-  /* -------------------------------- */
-  .product-card {
+}
+
+/* -------------------------------- */
+/* FLIP CARD */
+/* -------------------------------- */
+.product-card {
     height: 420px;
     perspective: 1200px;
     cursor: pointer;
-  }
-  
-  .product-card-inner {
+}
+
+.product-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 18px;
-  }
-  
-  .product-card:hover .product-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .product-front,
-  .product-back {
+}
+
+.product-card:hover .product-card-inner { transform: rotateY(180deg); }
+
+.product-front,
+.product-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -85,15 +83,13 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: white;             /* fondo blanco en cada cara */
-  }
-  
-  .product-back {
-    transform: rotateY(180deg);
-  }
-  
-  .product-front img,
-  .product-back img {
+    background: white;
+}
+
+.product-back { transform: rotateY(180deg); }
+
+.product-front img,
+.product-back img {
     width: 100%;
     height: 280px;
     flex: none;
@@ -101,13 +97,11 @@
     display: block;
     transition: transform 0.4s ease;
     padding: 20px;
-  }
-  
-  .product-card:hover .product-front img {
-    transform: scale(1.04);
-  }
-  
-  .product-tag {
+}
+
+.product-card:hover .product-front img { transform: scale(1.04); }
+
+.product-tag {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -121,119 +115,115 @@
     padding: 5px 12px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(15, 60, 102, 0.3);
-  }
-  
-  .product-back .product-tag {
-    background: rgba(15, 60, 102, 0.85);
-  }
-  
-  .product-label {
+}
+
+.product-back .product-tag { background: rgba(15, 60, 102, 0.85); }
+
+.product-label {
     padding: 20px 24px 24px 24px;
     background: white;
     border-top: 1px solid rgba(15, 60, 102, 0.08);
     flex-shrink: 0;
-  }
-  
-  .product-label h3 {
+}
+
+.product-label h3 {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     color: #0f3c66;
     margin-bottom: 4px;
-  }
-  
-  .product-label p {
+}
+
+.product-label p {
     font-size: 13px;
     color: #888;
     line-height: 1.5;
-  }
-  
-  .product-front {
+}
+
+.product-front {
     box-shadow: 0 16px 50px rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(15, 60, 102, 0.12);
-  }
-  
-  .product-back {
+}
+
+.product-back {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
     border: 1px solid rgba(15, 60, 102, 0.12);
-  }
-  
-  /* -------------------------------- */
-  /* SECTION DIVIDER */
-  /* -------------------------------- */
-  .products-divider {
+}
+
+/* -------------------------------- */
+/* SECTION DIVIDER */
+/* -------------------------------- */
+.products-divider {
     width: 80px;
     height: 2px;
     background: #0f3c66;
     opacity: 0.2;
     margin: 80px auto 70px auto;
-  }
-  
-  /* -------------------------------- */
-  /* BRANDS BLOCK */
-  /* -------------------------------- */
-  .brands-block {
-    text-align: left;
-  }
-  
-  .brands-header {
+}
+
+/* -------------------------------- */
+/* BRANDS BLOCK */
+/* -------------------------------- */
+.brands-block { text-align: left; }
+
+.brands-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 80px;
     align-items: center;
     margin-bottom: 50px;
-  }
-  
-  .brands-header h2 {
+}
+
+.brands-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     color: #0f3c66;
     margin: 10px 0 0 0;
-  }
-  
-  .brands-header p {
+}
+
+.brands-header p {
     max-width: 560px;
     margin: 0;
     font-size: 15px;
     color: #888;
     line-height: 1.7;
     padding-top: 6px;
-  }
-  
-  .brands-block .section-label { color: #0f3c66; }
-  
-  /* -------------------------------- */
-  /* BRANDS CAROUSEL */
-  /* -------------------------------- */
-  .brands-carousel-wrap {
+}
+
+.brands-block .section-label { color: #0f3c66; }
+
+/* -------------------------------- */
+/* BRANDS CAROUSEL */
+/* -------------------------------- */
+.brands-carousel-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .brands-carousel {
+}
+
+.brands-carousel {
     width: 1050px;
     max-width: calc(100% - 40px);
     overflow: hidden;
     flex-shrink: 0;
-  }
-  
-  .brands-track {
+}
+
+.brands-track {
     display: flex;
     gap: 30px;
     width: max-content;
     animation: scrollTrack 28s linear infinite;
     cursor: pointer;
-  }
-  
-  .brands-track:hover { animation-play-state: paused; }
-  
-  @keyframes scrollTrack {
+}
+
+.brands-track:hover { animation-play-state: paused; }
+
+@keyframes scrollTrack {
     0%   { transform: translateX(0); }
     100% { transform: translateX(var(--scroll-width, -50%)); }
-  }
-  
-  .brand-item {
+}
+
+.brand-item {
     width: 240px;
     height: 160px;
     flex-shrink: 0;
@@ -246,41 +236,23 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     cursor: pointer;
-  }
-  
-  .brand-item:hover {
+}
+
+.brand-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
-  }
-  
-  .brand-item img {
+}
+
+.brand-item img {
     max-width: 85%;
     max-height: 110px;
     object-fit: contain;
-  }
-  
-  .brand-arrow {
-    background: #0f3c66;
-    color: white;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.3s;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .brand-arrow:hover { background: #092846; transform: scale(1.08); }
-  
-  /* -------------------------------- */
-  /* LIGHTBOX */
-  /* -------------------------------- */
-  .lightbox {
+}
+
+/* -------------------------------- */
+/* LIGHTBOX */
+/* -------------------------------- */
+.lightbox {
     position: fixed;
     inset: 0;
     z-index: 1000;
@@ -290,18 +262,18 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-  }
-  
-  .lightbox.active { opacity: 1; pointer-events: all; }
-  
-  .lightbox-overlay {
+}
+
+.lightbox.active { opacity: 1; pointer-events: all; }
+
+.lightbox-overlay {
     position: absolute;
     inset: 0;
     background: rgba(10, 30, 55, 0.82);
     backdrop-filter: blur(4px);
-  }
-  
-  .lightbox-content {
+}
+
+.lightbox-content {
     position: relative;
     z-index: 2;
     max-width: 680px;
@@ -315,19 +287,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .lightbox.active .lightbox-content { transform: scale(1); }
-  
-  .lightbox-content img {
+}
+
+.lightbox.active .lightbox-content { transform: scale(1); }
+
+.lightbox-content img {
     max-width: 100%;
     max-height: 70vh;
     object-fit: contain;
     display: block;
     border-radius: 8px;
-  }
-  
-  .lightbox-close {
+}
+
+.lightbox-close {
     position: absolute;
     top: 14px;
     right: 16px;
@@ -338,14 +310,14 @@
     cursor: pointer;
     transition: color 0.2s;
     line-height: 1;
-  }
-  
-  .lightbox-close:hover { color: #0f3c66; }
-  
-  /* -------------------------------- */
-  /* CATALOG ROW */
-  /* -------------------------------- */
-  .catalog-row {
+}
+
+.lightbox-close:hover { color: #0f3c66; }
+
+/* -------------------------------- */
+/* CATALOG ROW */
+/* -------------------------------- */
+.catalog-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -353,17 +325,17 @@
     margin: 50px auto 0 auto;
     max-width: 1200px;
     border-top: 1px solid rgba(15, 60, 102, 0.1);
-  }
-  
-  .catalog-row p {
+}
+
+.catalog-row p {
     font-size: 15px;
     color: #888;
     letter-spacing: 0.2px;
-  }
-  
-  .catalog-row .catalog-buttons { display: flex; gap: 12px; }
-  
-  .catalog-btn {
+}
+
+.catalog-row .catalog-buttons { display: flex; gap: 12px; }
+
+.catalog-btn {
     background: #1f4b72;
     color: white;
     padding: 11px 24px;
@@ -373,28 +345,61 @@
     font-weight: 500;
     letter-spacing: 0.3px;
     transition: all 0.25s ease;
-  }
-  
-  .catalog-btn:hover { background: #173c5a; transform: translateY(-2px); }
-  
-  .catalog-btn-outline {
+}
+
+.catalog-btn:hover { background: #173c5a; transform: translateY(-2px); }
+
+.catalog-btn-outline {
     background: transparent;
     color: #1f4b72;
     border: 1.5px solid #1f4b72;
-  }
-  
-  .catalog-btn-outline:hover { background: #1f4b72; color: white; }
-  
-  /* -------------------------------- */
-  /* MOBILE */
-  /* -------------------------------- */
-  @media (max-width: 1000px) {
+}
+
+.catalog-btn-outline:hover { background: #1f4b72; color: white; }
+
+/* -------------------------------- */
+/* TABLET */
+/* -------------------------------- */
+@media (max-width: 1000px) {
     .products-intro-inner { grid-template-columns: 1fr; gap: 20px; }
     .products-grid { grid-template-columns: repeat(2, 1fr); }
     .brands-header { grid-template-columns: 1fr; gap: 20px; }
-  }
-  
-  @media (max-width: 650px) {
-    .products-grid { grid-template-columns: 1fr; }
-    .products-intro-left h2 { font-size: 36px; }
-  }
+}
+
+/* -------------------------------- */
+/* MOBILE */
+/* -------------------------------- */
+@media (max-width: 768px) {
+
+    .products-main { padding: 50px 0 70px; }
+
+    .products-intro-inner { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+    .products-intro-left h2 { font-size: 34px; }
+    .products-intro-right p { font-size: 14px; }
+
+    .products-grid { grid-template-columns: 1fr; gap: 24px; }
+    .product-card { height: 380px; }
+    .product-front img, .product-back img { height: 240px; padding: 16px; }
+    .product-label { padding: 14px 18px 18px; }
+    .product-label h3 { font-size: 17px; }
+
+    .products-divider { margin: 50px auto 40px; }
+
+    .brands-header { grid-template-columns: 1fr; gap: 12px; margin-bottom: 30px; }
+    .brands-header h2 { font-size: 26px; }
+    .brands-header p { font-size: 14px; }
+
+    .brands-carousel { max-width: 100%; }
+    .brand-item { width: 180px; height: 120px; }
+    .brand-item img { max-height: 80px; }
+
+    .catalog-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 28px 0 0;
+        margin: 36px 5% 0;
+    }
+    .catalog-row .catalog-buttons { flex-wrap: wrap; gap: 10px; }
+    .catalog-btn { font-size: 12px; padding: 10px 20px; }
+}
