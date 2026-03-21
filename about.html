@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Expotuna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/chatbot.css">
@@ -21,7 +23,12 @@
   <header class="navbar navbar-internal">
     <div class="nav-container">
       <img src="assets/logos/expotuna-logo.png" class="logo">
-      <nav>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav-menu">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="process.html">Process</a>
@@ -193,9 +200,6 @@
               <p class="card-overlay-location">Barcelona • 2024</p>
             </div>
           </div>
-          <div class="news-content">
-            <p>Meeting international seafood buyers and strengthening global partnerships.</p>
-          </div>
         </div>
         <div class="news-card">
           <div class="card-slider">
@@ -207,9 +211,6 @@
               <p class="card-overlay-title">Seafood Expo North America</p>
               <p class="card-overlay-location">Boston • 2024</p>
             </div>
-          </div>
-          <div class="news-content">
-            <p>Showcasing premium Ecuadorian shrimp to global seafood buyers.</p>
           </div>
         </div>
         <div class="news-card">
@@ -223,9 +224,6 @@
               <p class="card-overlay-location">Boston • 2025</p>
             </div>
           </div>
-          <div class="news-content">
-            <p>Strengthening relationships with North American seafood distributors.</p>
-          </div>
         </div>
         <div class="news-card">
           <div class="card-slider">
@@ -236,9 +234,6 @@
               <p class="card-overlay-title">Gulfood Expo</p>
               <p class="card-overlay-location">Dubai • 2025</p>
             </div>
-          </div>
-          <div class="news-content">
-            <p>Expanding relationships with Middle East seafood distributors.</p>
           </div>
         </div>
       </div>
@@ -323,6 +318,7 @@
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
   <script src="js/about.js"></script>
   <script src="js/chatbot.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

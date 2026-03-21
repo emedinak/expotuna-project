@@ -109,7 +109,6 @@
     margin: 0;
   }
   
-  /* ICON GRID */
   .about-icon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -169,7 +168,7 @@
   
   
   /* ================================
-     FLEET SECTION — PARALLAX
+     FLEET SECTION
   ================================ */
   .fleet-section {
     position: relative;
@@ -512,7 +511,6 @@
     gap: 16px;
   }
   
-  /* CARD — solo imagen, sin caja inferior */
   .news-card {
     border-radius: 16px;
     overflow: hidden;
@@ -528,7 +526,6 @@
     box-shadow: 0 24px 60px rgba(0,0,0,0.2);
   }
   
-  /* SLIDER */
   .card-slider {
     position: relative;
     width: 100%;
@@ -556,7 +553,6 @@
   .card-slider img.active { opacity: 1; }
   .news-card:hover .card-slider img.active { transform: scale(1.03); }
   
-  /* OVERLAY — oculto por defecto, aparece en hover */
   .card-overlay {
     position: absolute;
     bottom: 0; left: 0;
@@ -606,13 +602,12 @@
     text-align: left;
   }
   
-  /* eliminar sección de texto debajo */
   .news-content { display: none; }
   .news-tag { display: none; }
   
   
   /* ================================
-     MOBILE
+     TABLET
   ================================ */
   @media (max-width: 900px) {
     .about-editorial-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -621,11 +616,9 @@
     .about-logo-triangle { max-width: 280px; }
     .about-text-cols { grid-template-columns: 1fr; gap: 16px; }
     .about-icon-grid { grid-template-columns: repeat(2, 1fr); }
-  
     .fleet-content-inner { grid-template-columns: 1fr; gap: 48px; }
     .fleet-parallax-img { background-attachment: scroll; }
     .fleet-cards { grid-template-columns: 1fr 1fr; }
-  
     .export-stats {
       position: static;
       transform: none;
@@ -636,7 +629,58 @@
       background: #f4f7fb;
     }
     .export-stat-card { flex: 1 1 calc(50% - 12px); min-width: 0; }
-  
     .news-grid { grid-template-columns: 1fr 1fr; }
     .card-slider::after { padding-top: 130%; }
+  }
+
+  /* ================================
+     MOBILE
+  ================================ */
+  @media (max-width: 768px) {
+
+    .about-editorial-section { padding: 50px 0 60px; }
+    .about-editorial-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-visual { display: none; }
+    .about-editorial-title { font-size: 32px; }
+    .about-text-cols { grid-template-columns: 1fr; gap: 14px; }
+    .about-text-cols p { font-size: 14px; }
+    .about-icon-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; padding-top: 24px; }
+    .about-icon-item { gap: 10px; padding: 10px 0; }
+    .about-icon-item img { width: 22px; height: 22px; }
+    .about-icon-item p { font-size: 13px; }
+
+    .fleet-content { padding: 60px 0 50px; }
+    .fleet-content-inner { grid-template-columns: 1fr; gap: 32px; }
+    .fleet-parallax-img { background-attachment: scroll; }
+    .fleet-title { font-size: 28px; }
+    .fleet-intro { font-size: 14px; }
+    .fleet-cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fleet-card { padding: 20px 16px; }
+    .fleet-card h5 { font-size: 14px; }
+    .fleet-card p { font-size: 12px; }
+    .fleet-card-icon { width: 36px; height: 36px; margin-bottom: 12px; }
+    .fleet-card-icon svg { width: 18px; height: 18px; }
+
+    .export-map { padding: 40px 0 0; }
+    .export-map-header h2 { font-size: 28px; }
+    .export-map-intro { font-size: 14px; }
+    .map-wrapper svg { width: 100%; margin-left: 0; }
+    .export-stats {
+      position: static;
+      transform: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 20px 5%;
+      gap: 10px;
+      background: #f4f7fb;
+    }
+    .export-stat-card { flex: 1 1 calc(50% - 10px); min-width: 0; padding: 14px 16px; }
+    .export-stat-card h3 { font-size: 20px; }
+    .map-legend { padding: 12px 5% 20px; gap: 12px; }
+
+    .news { padding: 40px 0; }
+    .news h2 { font-size: 26px; }
+    .news-intro { font-size: 14px; margin-bottom: 28px; }
+    .news-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .card-slider::after { padding-top: 120%; }
   }
