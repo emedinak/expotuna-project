@@ -8,9 +8,11 @@
     object-fit: contain;
 }
 
-.contact .section-label {
-    color: #0f3c66;
-}
+.contact .section-label { color: #0f3c66; }
+
+/* -------------------------------- */
+/* CONTACT SECTION */
+/* -------------------------------- */
 
 .contact {
     padding: 80px 0 120px 0;
@@ -49,22 +51,15 @@
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 0.7fr 1.4fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: 60px;
     align-items: start;
     margin-top: -20px;
 }
 
 /* -------------------------------- */
-/* LEFT */
+/* LEFT INFO */
 /* -------------------------------- */
-
-.contact-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin-bottom: 25px;
-    color: #0f3c66;
-}
 
 .contact-info p {
     line-height: 1.6;
@@ -80,9 +75,7 @@
     align-items: flex-start;
 }
 
-.contact-item span {
-    font-size: 18px;
-}
+.contact-item span { font-size: 18px; }
 
 /* -------------------------------- */
 /* FORM */
@@ -171,31 +164,43 @@
     transition: all 0.3s ease;
 }
 
-.contact-social img:hover {
-    transform: scale(1.15);
+.contact-social img:hover { transform: scale(1.15); }
+
+/* -------------------------------- */
+/* TABLET */
+/* -------------------------------- */
+
+@media (max-width: 900px) {
+    .contact-intro { grid-template-columns: 1fr; gap: 20px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; }
 }
 
 /* -------------------------------- */
 /* MOBILE */
 /* -------------------------------- */
 
-@media (max-width: 900px) {
-    .contact-intro {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
+@media (max-width: 768px) {
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    gap: 60px;
-    align-items: start;
+    .contact { padding: 50px 0 70px; }
+
+    .contact-intro { grid-template-columns: 1fr; gap: 14px; margin-bottom: 30px; }
+    .contact-intro h2 { font-size: 34px; }
+    .contact-intro > p { font-size: 14px; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 0; }
+
+    .contact-item { font-size: 14px; }
+    .contact-item span { font-size: 16px; }
+
+    .form-row { grid-template-columns: 1fr; gap: 14px; }
+    .form-group input, .form-group textarea { font-size: 16px; }
+    .form-group textarea { height: 130px; }
+
+    .contact-form button {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 15px;
+    }
 }

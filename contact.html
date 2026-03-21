@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Expotuna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/chatbot.css">
@@ -20,7 +22,12 @@
     <header class="navbar navbar-internal">
         <div class="nav-container">
             <img src="assets/logos/expotuna-logo.png" class="logo">
-            <nav>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="process.html">Process</a>
@@ -165,6 +172,7 @@
 
     <script src="js/contact.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
