@@ -10,13 +10,13 @@
     line-height: 1.6;
     background: #ffffff;
   }
-
+  
   /* CONTAINER */
   .container {
     width: min(1200px, 90%);
     margin: auto;
   }
-
+  
   /* ================================
      NAVBAR
   ================================ */
@@ -58,7 +58,7 @@
   }
   nav a:hover::after { width: 100%; }
   nav a.active::after { width: 100%; }
-
+  
   /* INTERNAL NAVBAR */
   .navbar-internal {
     position: relative;
@@ -69,7 +69,7 @@
   .navbar-internal nav a { color: #0f3c66; }
   .navbar-internal nav a:hover { opacity: 0.7; }
   .navbar-internal .logo { height: 55px; width: auto; object-fit: contain; }
-
+  
   /* HOME NAVBAR */
   .navbar-home {
     position: fixed;
@@ -85,12 +85,12 @@
     border-bottom: 0.5px solid rgba(15, 60, 102, 0.3);
   }
   .navbar-home.scrolled nav a { color: #0f3c66; }
-
+  
   .navbar-home nav a::after         { background: white !important; }
   .navbar-home nav a.active::after  { width: 100%; background: white !important; }
   .navbar-home.scrolled nav a::after        { background: #0f3c66 !important; }
   .navbar-home.scrolled nav a.active::after { width: 100%; background: #0f3c66 !important; }
-
+  
   /* LOGO SWITCH */
   .navbar-home .logo-wrapper { position: relative; height: 55px; }
   .navbar-home .logo {
@@ -103,8 +103,8 @@
   .navbar-home .logo-white { opacity: 1; }
   .navbar-home.scrolled .logo-white { opacity: 0; }
   .navbar-home.scrolled .logo-blue  { opacity: 1; }
-
-
+  
+  
   /* ================================
      HERO
   ================================ */
@@ -198,7 +198,7 @@
     text-decoration: none;
   }
   .hero .btn-secondary:hover { border-color: rgba(255,255,255,0.75); color: white; }
-
+  
   /* HERO CARDS */
   .hero-cards {
     position: relative;
@@ -244,7 +244,7 @@
     font-weight: 500;
     margin: 0;
   }
-
+  
   /* HERO CERTS */
   .hero-certs {
     position: absolute;
@@ -278,26 +278,19 @@
     height: 46px;
     width: auto;
     object-fit: contain;
-    filter: none;
     opacity: 0;
     transform: translateY(8px);
     animation: certFadeIn 0.5s ease forwards;
   }
   .hero-certs-logos img:hover { opacity: 1 !important; }
-
   @keyframes certFadeIn {
-    to { opacity: 0.85; transform: translateY(0); }
+    to { opacity: 0.7; transform: translateY(0); }
   }
   .hero-certs-logos img:nth-child(1) { animation-delay: 0.2s; }
   .hero-certs-logos img:nth-child(2) { animation-delay: 0.35s; }
   .hero-certs-logos img:nth-child(3) { animation-delay: 0.5s; }
   .hero-certs-logos img:nth-child(4) { animation-delay: 0.65s; }
-  .hero-certs-logos img:hover { opacity: 1 !important; }
-
-  @keyframes certFadeIn {
-    to { opacity: 0.7; transform: translateY(0); }
-  }
-
+  
   @media (max-width: 768px) {
     .hero { justify-content: flex-end; padding-bottom: 120px; }
     .hero > .hero-content { margin-top: 0; }
@@ -310,8 +303,8 @@
     .hero-certs-logos { gap: 20px; flex-wrap: wrap; }
     .hero-certs-logos img { height: 32px; }
   }
-
-
+  
+  
   /* ================================
      ABOUT — INDEX
   ================================ */
@@ -438,8 +431,8 @@
     .about-stats-row { padding: 20px 0; }
     .about-stat-item { padding: 0 16px; }
   }
-
-
+  
+  
   /* ================================
      SECTION LABEL
   ================================ */
@@ -451,8 +444,8 @@
     margin-bottom: 12px;
     font-weight: 600;
   }
-
-
+  
+  
   /* ================================
      BUTTONS (global)
   ================================ */
@@ -476,8 +469,8 @@
     transition: 0.3s;
   }
   .btn-secondary:hover { background: white; color: #0f3c66; }
-
-
+  
+  
   /* ================================
      OUR GROUP
   ================================ */
@@ -490,10 +483,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 20px;
   }
-  .group-d-left { display: flex; flex-direction: column; gap: 12px; max-width: 280px; }
+  .group-d-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 280px;
+    flex-shrink: 0;
+  }
   .group-title {
     font-family: "Playfair Display", serif;
     font-size: 32px;
@@ -503,9 +501,17 @@
     letter-spacing: -0.5px;
   }
   .group-intro { font-size: 14px; color: #999; line-height: 1.7; }
-  .group-d-cards { display: flex; flex-direction: column; gap: 8px; width: 440px; flex-shrink: 0; margin-left: auto; }
+  .group-d-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    max-width: 580px;
+    margin-left: 0;
+  }
   .group-d-card {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
     background: white;
@@ -552,12 +558,18 @@
   }
   .group-d-card:hover .group-d-arrow { color: #0f3c66; transform: translateX(4px); }
   @media (max-width: 900px) {
-    .group-d-inner { flex-direction: column; gap: 36px; }
+    .group-section { padding: 60px 0; }
+    .group-d-inner { flex-direction: column; gap: 28px; }
     .group-d-left { max-width: 100%; }
-    .group-d-cards { min-width: 0; }
+    .group-title { font-size: 26px; }
+    .group-d-cards { max-width: 100%; margin-left: 0; }
+    .group-d-card { padding: 14px 16px; gap: 14px; }
+    .group-d-logo { width: 60px; height: 28px; }
+    .group-d-name { font-size: 13px; }
+    .group-d-desc { font-size: 11px; }
   }
-
-
+  
+  
   /* ================================
      MISSION / VISION
   ================================ */
@@ -606,8 +618,8 @@
   }
   .mission-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; }
   @media (max-width: 900px) { .mission-cards { grid-template-columns: 1fr; } }
-
-
+  
+  
   /* ================================
      WHATSAPP FLOAT
   ================================ */
@@ -622,8 +634,8 @@
   }
   .whatsapp-float img { width: 32px; height: 32px; }
   .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
-
-
+  
+  
   /* ================================
      ANIMATION ON SCROLL
   ================================ */
@@ -633,8 +645,8 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   [data-animate].visible { opacity: 1; transform: translateY(0); }
-
-
+  
+  
   /* ================================
      FOOTER
   ================================ */
@@ -695,8 +707,8 @@
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 4px; }
   }
-
-
+  
+  
   /* ================================
      HAMBURGER MENU
   ================================ */
@@ -724,10 +736,10 @@
   .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-hamburger.open span:nth-child(2) { opacity: 0; }
   .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+  
   @media (max-width: 768px) {
     .nav-hamburger { display: flex; }
-
+  
     #nav-menu {
       display: none;
       flex-direction: column;
@@ -749,7 +761,7 @@
       letter-spacing: 0.5px;
     }
     #nav-menu a::after { background: white !important; }
-
+  
     /* HERO MOBILE */
     .hero { justify-content: flex-start; padding-top: 100px; min-height: 100svh; }
     .hero-content { margin-top: 0; }
@@ -769,14 +781,10 @@
     .hero-card { width: auto; height: 90px; }
     .hero-card:last-child { grid-column: 1 / -1; }
     .hero-card h3 { font-size: 24px; }
-    .hero-certs {
-      flex-direction: column;
-      gap: 12px;
-      padding: 16px 0 24px;
-    }
+    .hero-certs { flex-direction: column; gap: 12px; padding: 16px 0 24px; }
     .hero-certs-logos { gap: 16px; flex-wrap: wrap; }
     .hero-certs-logos img { height: 28px; }
-
+  
     /* ABOUT MOBILE */
     .about { padding: 60px 0; }
     .about-container { grid-template-columns: 1fr; gap: 40px; }
@@ -787,35 +795,36 @@
     .stat-number { font-size: 26px; }
     .stat-label { font-size: 10px; }
     .about-image { display: none; }
-
+  
     /* MISSION MOBILE */
     .mission { padding: 60px 0; min-height: auto; }
     .mission-cards { grid-template-columns: 1fr; gap: 16px; }
     .mission-card { padding: 28px 24px; }
     .mission-card h3 { font-size: 24px; }
     .mission-card p { font-size: 13px; }
-
+  
     /* GROUP MOBILE */
     .group-section { padding: 60px 0; }
     .group-d-inner { flex-direction: column; gap: 28px; }
     .group-d-left { max-width: 100%; }
     .group-title { font-size: 26px; }
-    .group-d-cards { min-width: 0; width: 100%; }
+    .group-d-cards { max-width: 100%; margin-left: 0; }
     .group-d-card { padding: 14px 16px; gap: 14px; }
     .group-d-logo { width: 60px; height: 28px; }
     .group-d-name { font-size: 13px; }
     .group-d-desc { font-size: 11px; }
-
+  
     /* FOOTER MOBILE */
     .footer-grid { grid-template-columns: 1fr; gap: 28px; padding: 32px 0 24px; }
     .footer-col:first-child { grid-column: auto; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 4px; }
-
+  
     /* CHATBOT MOBILE */
     #chat-box { width: calc(100vw - 24px); right: 0; }
     #chat-widget { right: 12px; bottom: 100px; }
   }
-
+  
+  
   /* ================================
      PROCESS TIMELINE (internal pages)
   ================================ */
@@ -851,8 +860,8 @@
     .process-number { display: none; }
     .process-step.reverse { direction: ltr; }
   }
-
-
+  
+  
   /* ================================
      PAGE HERO (internal pages)
   ================================ */
