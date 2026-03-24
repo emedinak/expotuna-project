@@ -29,11 +29,25 @@
         <span></span>
       </button>
       <nav id="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="process.html">Process</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="about.html" class="active" data-i18n="nav-about">About</a>
+        <a href="process.html" data-i18n="nav-process">Process</a>
+        <a href="products.html" data-i18n="nav-products">Products</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
+
+        <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" onclick="toggleLangMenu()">
+              <span id="currentLang">EN</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="lang-menu" id="langMenu">
+              <button onclick="setLang('en')">EN — English</button>
+              <button onclick="setLang('es')">ES — Español</button>
+              <button onclick="setLang('zh')">ZH — 中文</button>
+            </div>
+          </div>
       </nav>
     </div>
   </header>
@@ -43,40 +57,40 @@
       <div class="about-editorial-content">
         <div class="about-accent-line">
           <span></span>
-          <p class="about-country">Ecuador</p>
+          <p class="about-country" data-i18n="about-country">Ecuador</p>
         </div>
         <h2 class="about-editorial-title">
-          Premium Ecuadorian<br>
-          <span>Seafood Exporter</span>
+          <span data-i18n="about-page-title1">Premium Ecuadorian</span><br>
+          <span data-i18n="about-page-title2">Seafood Exporter</span>
         </h2>
         <div class="about-text-cols">
-          <p>Expotuna S.A is a frozen fish and seafood processing and marketing company founded in 2005, committed to continuous improvement in quality, food safety, and industrial security. Its products meet the highest standards, undergoing semi-annual validation by the National Fisheries Institute.</p>
-          <p>Located in Guayaquil near Ecuador's two main ports, the company benefits from reliable access to fresh seafood and efficient containerized shipping. A dedicated quality control team supervises every stage of production 24 hours a day, 365 days a year.</p>
+          <p data-i18n="about-page-p1">Expotuna S.A is a frozen fish and seafood processing and marketing company founded in 2005, committed to continuous improvement in quality, food safety, and industrial security. Its products meet the highest standards, undergoing semi-annual validation by the National Fisheries Institute.</p>
+          <p data-i18n="about-page-p2">Located in Guayaquil near Ecuador's two main ports, the company benefits from reliable access to fresh seafood and efficient containerized shipping. A dedicated quality control team supervises every stage of production 24 hours a day, 365 days a year.</p>
         </div>
         <div class="about-icon-grid">
           <div class="about-icon-item">
             <img src="assets/icons/facilities.png" alt="Facilities" loading="lazy">
-            <p>Facilities</p>
+            <p data-i18n="about-icon-facilities">Facilities</p>
           </div>
           <div class="about-icon-item">
             <img src="assets/icons/sustainabilty.png" alt="Sustainability" loading="lazy">
-            <p>Sustainability</p>
+            <p data-i18n="about-icon-sustainability">Sustainability</p>
           </div>
           <div class="about-icon-item">
             <img src="assets/icons/certifications.png" alt="Certifications" loading="lazy">
-            <p>Certifications</p>
+            <p data-i18n="about-icon-certifications">Certifications</p>
           </div>
           <div class="about-icon-item">
             <img src="assets/icons/quality.png" alt="Quality Control" loading="lazy">
-            <p>Quality Control</p>
+            <p data-i18n="about-icon-quality">Quality Control</p>
           </div>
           <div class="about-icon-item">
             <img src="assets/icons/export.png" alt="Export" loading="lazy">
-            <p>Export</p>
+            <p data-i18n="about-icon-export">Export</p>
           </div>
           <div class="about-icon-item">
             <img src="assets/icons/heart.png" alt="Partnerships" loading="lazy">
-            <p>Partnerships</p>
+            <p data-i18n="about-icon-partnerships">Partnerships</p>
           </div>
         </div>
       </div>
@@ -96,14 +110,17 @@
         <div class="fleet-text">
           <p class="fleet-tag">
             <span class="fleet-tag-dot"></span>
-            Our Fleet
+            <span data-i18n="fleet-tag">Our Fleet</span>
           </p>
-          <h2 class="fleet-title">Fleet of <em>Ships</em><br>and Delivery</h2>
-          <p class="fleet-intro">Expotuna operates national and international industrial vessels, plus one of Ecuador's largest artisanal fleets — all HACCP-certified, cold chain maintained from ocean to destination.</p>
+          <h2 class="fleet-title">
+            <span data-i18n="fleet-title1">Fleet of</span> <em data-i18n="fleet-em">Ships</em><br>
+            <span data-i18n="fleet-title2">and Delivery</span>
+          </h2>
+          <p class="fleet-intro" data-i18n="fleet-intro">Expotuna operates national and international industrial vessels, plus one of Ecuador's largest artisanal fleets — all HACCP-certified, cold chain maintained from ocean to destination.</p>
           <div class="fleet-pills">
-            <span class="fleet-pill">HACCP Certified</span>
-            <span class="fleet-pill">0 – 4.5°C</span>
-            <span class="fleet-pill">24/7 Cold Chain</span>
+            <span class="fleet-pill" data-i18n="fleet-pill-1">HACCP Certified</span>
+            <span class="fleet-pill" data-i18n="fleet-pill-2">0 – 4.5°C</span>
+            <span class="fleet-pill" data-i18n="fleet-pill-3">24/7 Cold Chain</span>
           </div>
         </div>
         <div class="fleet-cards">
@@ -111,29 +128,29 @@
             <div class="fleet-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3Z"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
             </div>
-            <h5>Industrial Vessels</h5>
-            <p>National and international fleet with advanced refrigeration and HACCP-certified crews.</p>
+            <h5 data-i18n="fleet-card1-title">Industrial Vessels</h5>
+            <p data-i18n="fleet-card1-desc">National and international fleet with advanced refrigeration and HACCP-certified crews.</p>
           </div>
           <div class="fleet-card">
             <div class="fleet-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l9-13 9 13H3z"/><path d="M12 4v4"/></svg>
             </div>
-            <h5>Artisanal Fleet</h5>
-            <p>One of Ecuador's largest artisanal fleets, sustainably managed and monitored.</p>
+            <h5 data-i18n="fleet-card2-title">Artisanal Fleet</h5>
+            <p data-i18n="fleet-card2-desc">One of Ecuador's largest artisanal fleets, sustainably managed and monitored.</p>
           </div>
           <div class="fleet-card">
             <div class="fleet-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
             </div>
-            <h5>Cold Chain 0–4.5°C</h5>
-            <p>Refrigeration calibrated from capture through transit to ensure optimal preservation.</p>
+            <h5 data-i18n="fleet-card3-title">Cold Chain 0–4.5°C</h5>
+            <p data-i18n="fleet-card3-desc">Refrigeration calibrated from capture through transit to ensure optimal preservation.</p>
           </div>
           <div class="fleet-card">
             <div class="fleet-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </div>
-            <h5>Daily Delivery</h5>
-            <p>Nationwide refrigerated vehicles maintaining cold chain integrity to every destination.</p>
+            <h5 data-i18n="fleet-card4-title">Daily Delivery</h5>
+            <p data-i18n="fleet-card4-desc">Nationwide refrigerated vehicles maintaining cold chain integrity to every destination.</p>
           </div>
         </div>
       </div>
@@ -142,9 +159,9 @@
 
   <section class="export-map">
     <div class="export-map-header">
-      <p class="section-label">GLOBAL REACH</p>
-      <h2>Our Export Markets</h2>
-      <p class="export-map-intro">
+      <p class="section-label" data-i18n="map-label">GLOBAL REACH</p>
+      <h2 data-i18n="map-title">Our Export Markets</h2>
+      <p class="export-map-intro" data-i18n="map-intro">
         From Ecuador, we supply premium Vannamei shrimp to over 30 countries
         across Europe, the Americas, Asia, and Africa.
       </p>
@@ -155,27 +172,27 @@
         <svg id="world-map" viewBox="0 0 960 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;"></svg>
       </div>
       <div class="map-legend">
-        <div class="legend-item"><span class="legend-dot" style="background:#1a6fbd"></span> Europe</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#2a9d8f"></span> Americas</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#e76f51"></span> Asia</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#e9c46a"></span> Africa</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#1a6fbd"></span> <span data-i18n="legend-europe">Europe</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#2a9d8f"></span> <span data-i18n="legend-americas">Americas</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#e76f51"></span> <span data-i18n="legend-asia">Asia</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#e9c46a"></span> <span data-i18n="legend-africa">Africa</span></div>
       </div>
       <div class="export-stats">
         <div class="export-stat-card">
           <h3 data-target="3.5" data-prefix="+" data-suffix=" lb">+0 <span>lb</span></h3>
-          <p>Cold Storage Capacity</p>
+          <p data-i18n="stat-storage">Cold Storage Capacity</p>
         </div>
         <div class="export-stat-card">
           <h3 data-target="20" data-prefix="+" data-suffix=" Countries">+0 <span>Countries</span></h3>
-          <p>Export Destinations</p>
+          <p data-i18n="stat-countries2">Export Destinations</p>
         </div>
         <div class="export-stat-card">
           <h3 data-target="10" data-prefix="+" data-suffix=" lb">+0 <span>lb</span></h3>
-          <p>Monthly Production</p>
+          <p data-i18n="stat-production">Monthly Production</p>
         </div>
         <div class="export-stat-card">
           <h3 data-target="500" data-prefix="+" data-suffix=" People">+0 <span>People</span></h3>
-          <p>Trained Team</p>
+          <p data-i18n="stat-team">Trained Team</p>
         </div>
       </div>
     </div>
@@ -183,9 +200,9 @@
 
   <section class="news">
     <div class="container">
-      <p class="section-label">EXPOTUNA NEWS</p>
-      <h2>International Seafood Events</h2>
-      <p class="news-intro">
+      <p class="section-label" data-i18n="news-label">EXPOTUNA NEWS</p>
+      <h2 data-i18n="news-title">International Seafood Events</h2>
+      <p class="news-intro" data-i18n="news-intro">
         Expotuna actively participates in leading international seafood exhibitions,
         connecting with global partners and showcasing Ecuadorian shrimp worldwide.
       </p>
@@ -245,7 +262,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <img src="assets/logos/expotuna-logo-white.png" class="footer-logo" loading="lazy">
-          <p class="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
+          <p class="footer-tagline" data-i18n="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
           <div class="footer-social">
             <a href="https://www.linkedin.com/company/expotuna-s-a/" target="_blank" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -259,17 +276,17 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footer-nav-h4">Navigation</h4>
           <div class="footer-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="process.html">Process</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" data-i18n="nav-home">Home</a>
+            <a href="about.html" data-i18n="nav-about">About</a>
+            <a href="process.html" data-i18n="nav-process">Process</a>
+            <a href="products.html" data-i18n="nav-products">Products</a>
+            <a href="contact.html" data-i18n="nav-contact">Contact</a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer-contact-h4">Contact</h4>
           <p class="footer-contact">
             Parque Industrial, Vía a Daule 15½<br>
             Calle 29A NO<br>
@@ -279,7 +296,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Expotuna S.A. — All rights reserved</p>
+        <p data-i18n="footer-copyright">© 2025 Expotuna S.A. — All rights reserved</p>
         <p>Guayaquil, Ecuador</p>
       </div>
     </div>
@@ -290,16 +307,16 @@
       <div id="chat-header">
         <div id="chat-avatar">E</div>
         <div>
-          <p id="chat-title">Expotuna Assistant</p>
-          <p id="chat-status">Online · Replies instantly</p>
+          <p id="chat-title" data-i18n="chat-title">Expotuna Assistant</p>
+          <p id="chat-status" data-i18n="chat-status">Online · Replies instantly</p>
         </div>
         <button id="chat-close">×</button>
       </div>
       <div id="chat-messages">
-        <div class="msg bot">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
+        <div class="msg bot" data-i18n="chat-welcome">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
       </div>
       <div id="chat-input-row">
-        <input type="text" id="chat-input" placeholder="Write a message..." />
+        <input type="text" id="chat-input" data-i18n-ph="chat-placeholder" placeholder="Write a message..." />
         <button id="chat-send">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -319,6 +336,7 @@
   <script src="js/about.js"></script>
   <script src="js/chatbot.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/lang.js"></script>
 
 </body>
 </html>

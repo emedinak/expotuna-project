@@ -28,11 +28,25 @@
                 <span></span>
             </button>
             <nav id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="process.html" class="active">Process</a>
-                <a href="products.html">Products</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="about.html" data-i18n="nav-about">About</a>
+                <a href="process.html" class="active" data-i18n="nav-process">Process</a>
+                <a href="products.html" data-i18n="nav-products">Products</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn" onclick="toggleLangMenu()">
+                        <span id="currentLang">EN</span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <button onclick="setLang('en')">EN — English</button>
+                        <button onclick="setLang('es')">ES — Español</button>
+                        <button onclick="setLang('zh')">ZH — 中文</button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -41,11 +55,11 @@
         <div class="container">
             <div class="process-intro-inner">
                 <div class="process-intro-left">
-                    <p class="section-label">HOW WE WORK</p>
-                    <h2>Our Process</h2>
+                    <p class="section-label" data-i18n="process-label">HOW WE WORK</p>
+                    <h2 data-i18n="process-title">Our Process</h2>
                 </div>
                 <div class="process-intro-right">
-                    <p>The shrimp processing process involves several key stages to ensure product quality and food safety. Once harvested, shrimp are quickly transported to processing facilities where they are sorted by size and quality. Strict hygiene, temperature control, and quality assurance protocols are followed throughout to maintain freshness and meet international food safety standards.</p>
+                    <p data-i18n="process-intro-text">The shrimp processing process involves several key stages to ensure product quality and food safety. Once harvested, shrimp are quickly transported to processing facilities where they are sorted by size and quality. Strict hygiene, temperature control, and quality assurance protocols are followed throughout to maintain freshness and meet international food safety standards.</p>
                 </div>
             </div>
             <div class="process-grid">
@@ -56,8 +70,8 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Harvest</h3>
-                        <p>Our team verifies and oversees the shrimp harvesting process.</p>
+                        <h3 data-i18n="step1-title">Harvest</h3>
+                        <p data-i18n="step1-desc">Our team verifies and oversees the shrimp harvesting process.</p>
                     </div>
                 </div>
                 <div class="process-card" data-step="2">
@@ -67,8 +81,8 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Reception</h3>
-                        <p>We receive and ensure that the raw material arrives in excellent condition.</p>
+                        <h3 data-i18n="step2-title">Reception</h3>
+                        <p data-i18n="step2-desc">We receive and ensure that the raw material arrives in excellent condition.</p>
                     </div>
                 </div>
                 <div class="process-card" data-step="3">
@@ -78,8 +92,8 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Selection</h3>
-                        <p>Our specialists select the finest raw materials.</p>
+                        <h3 data-i18n="step3-title">Selection</h3>
+                        <p data-i18n="step3-desc">Our specialists select the finest raw materials.</p>
                     </div>
                 </div>
                 <div class="process-card" data-step="4">
@@ -89,8 +103,8 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Classification</h3>
-                        <p>We use high-tech machinery to classify the product by size.</p>
+                        <h3 data-i18n="step4-title">Classification</h3>
+                        <p data-i18n="step4-desc">We use high-tech machinery to classify the product by size.</p>
                     </div>
                 </div>
                 <div class="process-card" data-step="5">
@@ -100,8 +114,8 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Storage</h3>
-                        <p>The product is stored in cold storage at the optimal temperature to preserve freshness.</p>
+                        <h3 data-i18n="step5-title">Storage</h3>
+                        <p data-i18n="step5-desc">The product is stored in cold storage at the optimal temperature to preserve freshness.</p>
                     </div>
                 </div>
                 <div class="process-card" data-step="6">
@@ -111,14 +125,14 @@
                         <div class="step-overlay"></div>
                     </div>
                     <div class="step-body">
-                        <h3>Dispatch</h3>
-                        <p>We load the product maintaining the cold chain to ensure it reaches its destination in perfect condition.</p>
+                        <h3 data-i18n="step6-title">Dispatch</h3>
+                        <p data-i18n="step6-desc">We load the product maintaining the cold chain to ensure it reaches its destination in perfect condition.</p>
                     </div>
                 </div>
             </div>
             <div class="innovation-bar">
-                <p class="innovation-label">CONTINUOUS IMPROVEMENT</p>
-                <p class="innovation-text">We place a strong emphasis on quality through continuous <strong>innovation</strong>, embracing advanced technologies to deliver premium products.</p>
+                <p class="innovation-label" data-i18n="innovation-label">CONTINUOUS IMPROVEMENT</p>
+                <p class="innovation-text" data-i18n="innovation-text">We place a strong emphasis on quality through continuous innovation, embracing advanced technologies to deliver premium products.</p>
             </div>
         </div>
     </section>
@@ -128,7 +142,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="assets/logos/expotuna-logo-white.png" class="footer-logo" loading="lazy">
-                    <p class="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
+                    <p class="footer-tagline" data-i18n="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
                     <div class="footer-social">
                         <a href="https://www.linkedin.com/company/expotuna-s-a/" target="_blank" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -142,17 +156,17 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer-nav-h4">Navigation</h4>
                     <div class="footer-nav">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="process.html">Process</a>
-                        <a href="products.html">Products</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="index.html" data-i18n="nav-home">Home</a>
+                        <a href="about.html" data-i18n="nav-about">About</a>
+                        <a href="process.html" data-i18n="nav-process">Process</a>
+                        <a href="products.html" data-i18n="nav-products">Products</a>
+                        <a href="contact.html" data-i18n="nav-contact">Contact</a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer-contact-h4">Contact</h4>
                     <p class="footer-contact">
                         Parque Industrial, Vía a Daule 15½<br>
                         Calle 29A NO<br>
@@ -162,7 +176,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Expotuna S.A. — All rights reserved</p>
+                <p data-i18n="footer-copyright">© 2025 Expotuna S.A. — All rights reserved</p>
                 <p>Guayaquil, Ecuador</p>
             </div>
         </div>
@@ -173,16 +187,16 @@
             <div id="chat-header">
                 <div id="chat-avatar">E</div>
                 <div>
-                    <p id="chat-title">Expotuna Assistant</p>
-                    <p id="chat-status">Online · Replies instantly</p>
+                    <p id="chat-title" data-i18n="chat-title">Expotuna Assistant</p>
+                    <p id="chat-status" data-i18n="chat-status">Online · Replies instantly</p>
                 </div>
                 <button id="chat-close">×</button>
             </div>
             <div id="chat-messages">
-                <div class="msg bot">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
+                <div class="msg bot" data-i18n="chat-welcome">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
             </div>
             <div id="chat-input-row">
-                <input type="text" id="chat-input" placeholder="Write a message..." />
+                <input type="text" id="chat-input" data-i18n-ph="chat-placeholder" placeholder="Write a message..." />
                 <button id="chat-send">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -200,6 +214,7 @@
     <script src="js/process.js"></script>
     <script src="js/chatbot.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/lang.js"></script>
 
 </body>
 </html>

@@ -879,3 +879,95 @@
     background: rgba(15,60,102,0.6); z-index: -1;
   }
   .page-hero h1 { font-family: "Playfair Display", serif; font-size: 48px; }
+
+  
+
+  /* ================================
+   LANG SWITCHER
+================================ */
+.lang-switcher {
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  .lang-btn {
+    background: #0f3c66;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+  }
+  
+  /* En home navbar (sobre el hero, fondo transparente) */
+  .navbar-home .lang-btn {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.45);
+    color: white;
+  }
+  .navbar-home.scrolled .lang-btn {
+    background: #0f3c66;
+    border: none;
+    color: white;
+  }
+  
+  .lang-btn:hover { background: #0c2f4e; }
+  .navbar-home .lang-btn:hover { background: rgba(255,255,255,0.25); }
+  .navbar-home.scrolled .lang-btn:hover { background: #0c2f4e; }
+  
+  .lang-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+    min-width: 150px;
+    z-index: 100;
+  }
+  .lang-menu.open { display: block; }
+  
+  .lang-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #0f3c66;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .lang-menu button:hover { background: #f0f4f8; }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .lang-switcher {
+      margin-left: 0;
+      margin-top: 16px;
+    }
+    .lang-btn {
+      background: rgba(255,255,255,0.15) !important;
+      border: 1.5px solid rgba(255,255,255,0.4) !important;
+      color: white !important;
+      padding: 8px 18px;
+      font-size: 15px;
+    }
+    .lang-menu {
+      left: 50%;
+      transform: translateX(-50%);
+      right: auto;
+    }
+  }

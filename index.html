@@ -32,11 +32,25 @@
                 <span></span>
             </button>
             <nav id="nav-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="process.html">Process</a>
-                <a href="products.html">Products</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" class="active" data-i18n="nav-home">Home</a>
+                <a href="about.html" data-i18n="nav-about">About</a>
+                <a href="process.html" data-i18n="nav-process">Process</a>
+                <a href="products.html" data-i18n="nav-products">Products</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+                
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn" onclick="toggleLangMenu()">
+                        <span id="currentLang">EN</span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <button onclick="setLang('en')">EN — English</button>
+                        <button onclick="setLang('es')">ES — Español</button>
+                        <button onclick="setLang('zh')">ZH — 中文</button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -48,31 +62,31 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Expotuna S.A.</h1>
-            <p class="hero-subtitle">
+            <h1 data-i18n="hero-title">Expotuna S.A.</h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">
                 Premium Ecuadorian shrimp processing and export company supplying global seafood markets.
             </p>
             <div class="hero-buttons">
-                <a href="products.html" class="btn-primary">View Products</a>
-                <a href="contact.html" class="btn-secondary">Contact Us</a>
+                <a href="products.html" class="btn-primary" data-i18n="btn-products">View Products</a>
+                <a href="contact.html" class="btn-secondary" data-i18n="btn-contact">Contact Us</a>
             </div>
         </div>
         <div class="hero-cards">
             <div class="hero-card">
                 <h3 class="counter" data-target="20">0+</h3>
-                <p>Years Experience</p>
+                <p data-i18n="stat-years-label">Years Experience</p>
             </div>
             <div class="hero-card">
                 <h3 class="counter" data-target="15">0+</h3>
-                <p>Export Markets</p>
+                <p data-i18n="stat-markets-label">Export Markets</p>
             </div>
             <div class="hero-card">
                 <h3 class="counter" data-target="100" data-type="percent">0%</h3>
-                <p>Quality Control</p>
+                <p data-i18n="stat-quality-label">Quality Control</p>
             </div>
         </div>
         <div class="hero-certs">
-            <span class="hero-certs-label">Certified by</span>
+            <span class="hero-certs-label" data-i18n="certs-label">Certified by</span>
             <div class="hero-certs-logos">
                 <img src="assets/logos/ASC.png" alt="ASC" loading="lazy">
                 <img src="assets/logos/BASC.png" alt="BASC" loading="lazy">
@@ -86,28 +100,34 @@
     <section class="about">
         <div class="about-container">
             <div class="about-text">
-                <p class="section-label">ABOUT EXPOTUNA</p>
-                <h2>Premium<br>Ecuadorian<br><span>Shrimp Exporter</span></h2>
-                <p class="about-claim">
+                <p class="section-label" data-i18n="about-section-label">ABOUT EXPOTUNA</p>
+                <h2>
+                    <span data-i18n="about-title-line1">Premium</span><br>
+                    <span data-i18n="about-title-line2">Ecuadorian</span><br>
+                    <span data-i18n="about-title-line3">Shrimp Exporter</span>
+                </h2>
+                <p class="about-claim" data-i18n="about-claim">
                     Over two decades supplying the world's most demanding seafood markets with traceable, certified Ecuadorian shrimp.
                 </p>
                 <div class="about-stats-row">
                     <div class="about-stat-item">
                         <span class="stat-number">20+</span>
-                        <span class="stat-label">Years</span>
+                        <span class="stat-label" data-i18n="about-stat-years">Years</span>
                     </div>
                     <div class="about-stat-divider"></div>
                     <div class="about-stat-item">
                         <span class="stat-number">20+</span>
-                        <span class="stat-label">Countries</span>
+                        <span class="stat-label" data-i18n="about-stat-countries">Countries</span>
                     </div>
                     <div class="about-stat-divider"></div>
                     <div class="about-stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Quality</span>
+                        <span class="stat-label" data-i18n="about-stat-quality">Quality</span>
                     </div>
                 </div>
-                <a href="about.html" class="about-cta-link">Learn more about us <span>→</span></a>
+                <a href="about.html" class="about-cta-link">
+                    <span data-i18n="about-cta">Learn more about us</span> <span>→</span>
+                </a>
             </div>
             <div class="about-image">
                 <img src="assets/images/about.png" loading="lazy">
@@ -123,16 +143,16 @@
         </div>
         <div class="container mission-cards">
             <div class="mission-card" data-animate>
-                <p class="mission-tag">Mission</p>
-                <h3>Our Mission</h3>
+                <p class="mission-tag" data-i18n="mission-tag">Mission</p>
+                <h3 data-i18n="mission-h3">Our Mission</h3>
                 <div class="mission-line"></div>
-                <p>Our mission is to deliver the highest quality shrimp to our customers while positioning our brand as a leader in both national and international markets.</p>
+                <p data-i18n="mission-text">Our mission is to deliver the highest quality shrimp to our customers while positioning our brand as a leader in both national and international markets.</p>
             </div>
             <div class="mission-card" data-animate style="transition-delay: 0.15s;">
-                <p class="mission-tag">Vision</p>
-                <h3>Our Vision</h3>
+                <p class="mission-tag" data-i18n="vision-tag">Vision</p>
+                <h3 data-i18n="vision-h3">Our Vision</h3>
                 <div class="mission-line"></div>
-                <p>Committed to excellence, we strive to set new global benchmarks in efficiency, reliability, and customer satisfaction.</p>
+                <p data-i18n="vision-text">Committed to excellence, we strive to set new global benchmarks in efficiency, reliability, and customer satisfaction.</p>
             </div>
         </div>
     </section>
@@ -142,32 +162,32 @@
         <div class="container">
             <div class="group-d-inner">
                 <div class="group-d-left">
-                    <p class="section-label">Our Group</p>
-                    <h2 class="group-title">Part of an integrated seafood group</h2>
-                    <p class="group-intro">From farming to retail — every step of the chain covered.</p>
+                    <p class="section-label" data-i18n="group-label">Our Group</p>
+                    <h2 class="group-title" data-i18n="group-title">Part of an integrated seafood group</h2>
+                    <p class="group-intro" data-i18n="group-intro">From farming to retail — every step of the chain covered.</p>
                 </div>
                 <div class="group-d-cards">
                     <a href="https://alimesa.com.ec/en/home/" target="_blank" class="group-d-card" data-animate>
                         <img src="assets/logos/LOGO ALIMESA AZUL CAMARÓN SIN FONDO.png" class="group-d-logo" loading="lazy">
                         <div class="group-d-text">
-                            <p class="group-d-name">Alimesa</p>
-                            <p class="group-d-desc">Shrimp farming and primary production.</p>
+                            <p class="group-d-name" data-i18n="alimesa-name">Alimesa</p>
+                            <p class="group-d-desc" data-i18n="alimesa-desc">Shrimp farming and primary production.</p>
                         </div>
                         <span class="group-d-arrow">→</span>
                     </a>
                     <a href="https://www.frigolab.com.ec/" target="_blank" class="group-d-card" data-animate style="transition-delay:0.1s;">
                         <img src="assets/logos/frigolab-logo.png" class="group-d-logo" loading="lazy">
                         <div class="group-d-text">
-                            <p class="group-d-name">Frigolab</p>
-                            <p class="group-d-desc">Advanced seafood quality control lab.</p>
+                            <p class="group-d-name" data-i18n="frigolab-name">Frigolab</p>
+                            <p class="group-d-desc" data-i18n="frigolab-desc">Advanced seafood quality control lab.</p>
                         </div>
                         <span class="group-d-arrow">→</span>
                     </a>
                     <a href="https://pescaderiasanmateo.com/" target="_blank" class="group-d-card" data-animate style="transition-delay:0.2s;">
                         <img src="assets/logos/sanmateo-logo.png" class="group-d-logo" loading="lazy">
                         <div class="group-d-text">
-                            <p class="group-d-name">San Mateo</p>
-                            <p class="group-d-desc">Retail seafood distribution to consumers.</p>
+                            <p class="group-d-name" data-i18n="sanmateo-name">San Mateo</p>
+                            <p class="group-d-desc" data-i18n="sanmateo-desc">Retail seafood distribution to consumers.</p>
                         </div>
                         <span class="group-d-arrow">→</span>
                     </a>
@@ -182,7 +202,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="assets/logos/expotuna-logo-white.png" class="footer-logo" loading="lazy">
-                    <p class="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
+                    <p class="footer-tagline" data-i18n="footer-tagline">Premium Ecuadorian shrimp exporter.</p>
                     <div class="footer-social">
                         <a href="https://www.linkedin.com/company/expotuna-s-a/" target="_blank" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -196,17 +216,17 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer-nav-h4">Navigation</h4>
                     <div class="footer-nav">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="process.html">Process</a>
-                        <a href="products.html">Products</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="index.html" data-i18n="nav-home">Home</a>
+                        <a href="about.html" data-i18n="nav-about">About</a>
+                        <a href="process.html" data-i18n="nav-process">Process</a>
+                        <a href="products.html" data-i18n="nav-products">Products</a>
+                        <a href="contact.html" data-i18n="nav-contact">Contact</a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer-contact-h4">Contact</h4>
                     <p class="footer-contact">
                         Parque Industrial, Vía a Daule 15½<br>
                         Calle 29A NO<br>
@@ -216,7 +236,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Expotuna S.A. — All rights reserved</p>
+                <p data-i18n="footer-copyright">© 2025 Expotuna S.A. — All rights reserved</p>
                 <p>Careers · <a href="mailto:talento@expotuna.com">talento@expotuna.com</a></p>
             </div>
         </div>
@@ -228,16 +248,16 @@
             <div id="chat-header">
                 <div id="chat-avatar">E</div>
                 <div>
-                    <p id="chat-title">Expotuna Assistant</p>
-                    <p id="chat-status">Online · Replies instantly</p>
+                    <p id="chat-title" data-i18n="chat-title">Expotuna Assistant</p>
+                    <p id="chat-status" data-i18n="chat-status">Online · Replies instantly</p>
                 </div>
                 <button id="chat-close">×</button>
             </div>
             <div id="chat-messages">
-                <div class="msg bot">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
+                <div class="msg bot" data-i18n="chat-welcome">Hi! I'm Expotuna's virtual assistant. How can I help you today?</div>
             </div>
             <div id="chat-input-row">
-                <input type="text" id="chat-input" placeholder="Write a message..." />
+                <input type="text" id="chat-input" data-i18n-ph="chat-placeholder" placeholder="Write a message..." />
                 <button id="chat-send">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -254,6 +274,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/lang.js"></script>
 
 </body>
 </html>
