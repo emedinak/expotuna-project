@@ -1019,3 +1019,47 @@
         display: none;
     }
 }
+
+/* Añade esto al final de styles.css */
+
+@media (max-width: 768px) {
+
+    /* Ocultar el botón EN con la flecha */
+    #nav-menu .lang-btn {
+        display: none;
+    }
+
+    /* El dropdown siempre visible, estático, sin posición absoluta */
+    #nav-menu .lang-menu {
+        position: static !important;
+        display: flex !important;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-top: 0;
+        opacity: 1 !important;
+        pointer-events: all !important;
+        transform: none !important;
+    }
+
+    /* Estilo de cada botón de idioma */
+    #nav-menu .lang-menu button {
+        background: rgba(255,255,255,0.1);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 6px;
+        padding: 7px 14px;
+        font-size: 13px;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    #nav-menu .lang-menu button:hover {
+        background: rgba(255,255,255,0.22);
+    }
+}
