@@ -160,10 +160,14 @@ const hamburger = document.getElementById('nav-hamburger');
 const navMenu   = document.getElementById('nav-menu');
 
 if (hamburger && navMenu) {
+  const floatingBtns = document.querySelectorAll('.whatsapp-float, #chat-widget');
+
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navMenu.classList.toggle('open');
-    document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    const isOpen = navMenu.classList.contains('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    floatingBtns.forEach(btn => btn.style.display = isOpen ? 'none' : '');
   });
 
   // Cerrar al pulsar un link de navegación
@@ -172,6 +176,7 @@ if (hamburger && navMenu) {
       hamburger.classList.remove('open');
       navMenu.classList.remove('open');
       document.body.style.overflow = '';
+      floatingBtns.forEach(btn => btn.style.display = '');
     });
   });
 }
