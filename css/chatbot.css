@@ -45,6 +45,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 #chat-avatar {
@@ -91,9 +92,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 320px;
     overflow-y: auto;
     background: #f8fafc;
+    flex: 1;
 }
 
 .msg {
@@ -127,6 +128,7 @@
     display: flex;
     gap: 8px;
     background: white;
+    flex-shrink: 0;
 }
 
 #chat-input {
@@ -155,3 +157,31 @@
 }
 
 #chat-send:hover { background: #1a5490; }
+
+/* ── MÓVIL ── */
+@media (max-width: 768px) {
+    #chat-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #chat-box {
+        position: fixed;
+        bottom: 90px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+        /* Altura máxima = pantalla - espacio para bubble y barra del navegador */
+        max-height: calc(100dvh - 120px);
+        display: none;
+        flex-direction: column;
+    }
+
+    #chat-box.open { display: flex; }
+
+    #chat-messages {
+        flex: 1;
+        min-height: 0; /* importante para que flex funcione con overflow */
+        max-height: none;
+    }
+}

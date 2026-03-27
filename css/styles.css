@@ -971,3 +971,51 @@
       right: auto;
     }
   }
+
+  /* Añade esto al final de styles.css */
+
+/* Menú móvil con scroll para que idiomas sean accesibles */
+@media (max-width: 768px) {
+    #nav-menu {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* El lang switcher dentro del menú móvil no usa dropdown,
+       muestra las opciones directamente como botones */
+    #nav-menu #langSwitcher {
+        position: relative;
+    }
+
+    #nav-menu #langMenu {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        gap: 10px;
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-top: 8px;
+        justify-content: center;
+    }
+
+    #nav-menu #langMenu .lang-option {
+        background: rgba(255,255,255,0.1);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 6px;
+        padding: 6px 14px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    #nav-menu #langMenu .lang-option:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    /* Ocultar el botón toggle de idioma en móvil ya que mostramos las opciones directamente */
+    #nav-menu #langToggle {
+        display: none;
+    }
+}
