@@ -23,7 +23,7 @@ async function sendMsg() {
     const typing = addMsg('Typing...', 'bot typing');
 
     try {
-        const res = await fetch('/.netlify/functions/chat', {
+        const res = await fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ messages: history })
