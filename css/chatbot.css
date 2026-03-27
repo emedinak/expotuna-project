@@ -1,7 +1,7 @@
 #chat-widget {
     position: fixed;
     bottom: 30px;
-    right: 100px;
+    right: 100px; /* WhatsApp está a right:30px con 60px de ancho, así que 30+60+10=100px */
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@
 @media (max-width: 768px) {
     #chat-widget {
         bottom: 20px;
-        right: 20px;
+        right: 100px; /* WhatsApp en móvil: right:30px + 60px ancho + 10px gap */
     }
 
     #chat-box {
