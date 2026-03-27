@@ -161,8 +161,8 @@
 /* ── MÓVIL ── */
 @media (max-width: 768px) {
     #chat-widget {
-        bottom: 20px;
-        right: 100px; /* WhatsApp en móvil: right:30px + 60px ancho + 10px gap */
+        bottom: 30px;
+        right: 100px;
     }
 
     #chat-box {
